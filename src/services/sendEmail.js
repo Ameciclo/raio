@@ -47,7 +47,7 @@ const sendEmail = (event, body, func) => {
   }
   const data = {
     from: `<contato@ameciclo.org>`,
-    to: 'italo@linuxmail.org',
+    to: 'contato@ameciclo.org',
     subject: 'LOA Clima | Contato site',
     text: `Nome: ${body.name} \n Email: ${body.email} \n Telefone: ${body.phone} \n Local: ${body.local} \n Grupo: \n ${groupParseData()} \n Mensagem: ${body.message}`
   };
