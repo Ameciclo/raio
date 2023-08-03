@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../components/Header'
 import SideNavBar from '../components/SideNavBar';
 import video from '../video/home-bg.mp4';
-import image from '../images/logo1.png'
+import logo from '../images/logo1.png';
 
 function Home() {
   const [backgroundLoaded, setBackgroundLoaded] = useState(false);
@@ -43,7 +43,7 @@ function Home() {
                         CONTATO  ➜
                       </a>
                     </div>
-                    <img src={image} className='home-cover-logo' alt='LOAClima Logo'></img>
+                    <img src={logo} className='home-cover-logo' alt='LOAClima Logo'></img>
                   </div>
                   <div className='home-text-about'>
                     <h2>O que é o LOAClima?</h2><br />
@@ -53,29 +53,29 @@ function Home() {
                   <div className='home-faq'>
                     <h2>Perguntas Frequêntes</h2>
                     <div className='card-container'>
-                      <div className='faq-card'>
+                      <a className='faq-card' href='/faq'>
                         <h3>O que é LOA?</h3>
-                      </div>
-                      <div className='faq-card'>
+                      </a>
+                      <a className='faq-card' href='/faq'>
                         <h3>O que é PPA?</h3>
-                      </div>
-                      <div className='faq-card'>
+                      </a>
+                      <a className='faq-card' href='/faq'>
                         <h3>O que é LDO?</h3>
-                      </div>
+                      </a>
                     </div>
                     <a href='/contato' className='contact-link-btn'>Faça uma pergunta!</a>
                   </div>
                   <div className='home-partners'>
                     <h2>Parcerias</h2>
                     <div className='card-container'>
-                      <div className='partner-card'>
-                        <h3>...</h3>
-                      </div>
+                      <a className='partner-card' href="https://gestos.org.br/">
+                        <img src={"https://res.cloudinary.com/plpbs/image/upload/v1689873101/thumbnail_Logomarca_da_Gestos_6267e342ab.png"} className='' alt='Logo da Gestos'></img>
+                      </a>
                     </div>
                     <a href='/contato' className='contact-link-btn'>Quero fazer parceria!</a>
                   </div>
                   <footer>
-                    <img src={image} className='' alt='LOAClima Logo'></img>
+                    <img src={logo} className='' alt='LOAClima Logo'></img>
                     <aside>
                       <a href="/contato">Contato</a>
                       <a href="/faq">FAQ</a>
