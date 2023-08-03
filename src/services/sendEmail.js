@@ -46,9 +46,9 @@ const sendEmail = (event, body, func) => {
     return "nao possui"
   }
   const data = {
-    from: `<contato@ameciclo.org>`,
+    from: `LOA Clima <loaclima@ameciclo.org>`,
     to: 'contato@ameciclo.org',
-    subject: 'LOA Clima | Contato site',
+    subject: 'Contato do site',
     text: `Nome: ${body.name} \n Email: ${body.email} \n Telefone: ${body.phone} \n Local: ${body.local} \n Grupo: \n ${groupParseData()} \n Mensagem: ${body.message}`
   };
 
