@@ -1141,11 +1141,15 @@ div.contact-group-activity {
   padding: 20px;
 }
 
+.ask-container h1 {
+  font-size: larger;
+}
+
 .ask-card {
   width: 70vw;
   display: flex;
   flex-direction: column;
-  font-size: 20px;
+  font-size: 15px;
   padding: 10px;
 }
 
