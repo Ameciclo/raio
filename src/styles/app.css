@@ -220,8 +220,6 @@ a {
   align-items: center;
   background-color: rgba(7, 255, 152, 0);
   justify-content: space-around;
-  padding: 20px;
-  padding-left: 80px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&family=Raleway:wght@100;700&display=swap');
@@ -518,7 +516,7 @@ aside a {
   display: flex;
   opacity: 0.7;
   align-items: center;
-  filter: brightness(77%);
+  filter: brightness(90%);
   background-color: transparent;
 }
 
@@ -1244,6 +1242,11 @@ div.accept-box {
   .home-text-cover h1 {
     font-size: 50px;
   }
+  
+  .home-text-about p {
+    max-width: 1300px;
+    color: #f5f8f8;
+  }
 
   .faq-card {
     width: 90vw;
@@ -1588,6 +1591,10 @@ div.accept-box {
   footer {
     flex-direction: column-reverse;
     height: auto;
+  }
+
+  footer img{
+    width: 50%;
   }
 
   footer aside {
