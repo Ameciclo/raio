@@ -258,7 +258,7 @@ a {
 }
 
 .Clima-title {
-  color: #008888;
+  color: #008080;
 }
 
 .LOA-title {
@@ -1244,8 +1244,8 @@ div.accept-box {
   }
   
   .home-text-about p {
-    max-width: 1300px;
-    color: #f5f8f8;
+    text-align: justify;
+    font-size: 20px;
   }
 
   .faq-card {
