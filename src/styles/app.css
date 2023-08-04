@@ -1587,6 +1587,10 @@ div.accept-box {
     width: 90vw;
   }
 
+  .faq-main span {
+    color: #000;
+  }
+
   footer {
     flex-direction: column-reverse;
     height: auto;
