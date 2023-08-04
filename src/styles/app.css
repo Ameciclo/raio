@@ -514,6 +514,7 @@ aside a {
 }
 
 .home-cover-logo {
+  width: 500px;
   display: flex;
   opacity: 0.7;
   align-items: center;
