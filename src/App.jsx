@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 import './styles/app.css';
-import {Home, NotFoundPage, Contact, Faq} from './pages';
+import {Home, NotFoundPage, Contact, Faq, SingleNews, News} from './pages';
 import AppProvider from './context/AppProvider';
 
 function App() {
@@ -11,6 +11,8 @@ function App() {
         <Route exact path="/" element={ <Home /> } />
         <Route path="/contato" element={ <Contact /> } />
         <Route path="/faq" element={ <Faq /> } />
+        <Route path="/news/1" element={ <SingleNews /> } />
+        <Route path="/news" element={ <News /> } />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </AppProvider>

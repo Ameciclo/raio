@@ -12,6 +12,7 @@ function Navbar(props) {
         <a href='/' className={navIsActive(props.page, '/') && 'nav-active'}>INÍCIO</a>
         <a href='/contato' className={navIsActive(props.page, '/contato') && 'nav-active'}>CONTATO</a>
         <a href='/faq' className={navIsActive(props.page, '/dev') && 'nav-active'}>FAQ</a>
+        <a href='/news' className={navIsActive(props.page, '/news') && 'nav-active'}>NOTÍCIAS</a>
       </nav>
       <button className='hamburger' onClick={() => setNavBarListOn(!navBarListOn)}>☰</button>
     </>

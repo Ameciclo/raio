@@ -9,8 +9,9 @@
 }
 
 body {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   color: white;
+  overflow-x: hidden;
 }
 
 video {
@@ -206,7 +207,7 @@ a {
 .nav-active {
   display: flex;
   padding: 5px;
-  border-bottom: 0.5px solid rgba(95, 158, 160, 0.634);
+  border-bottom: 0.5px solid rgb(0, 247, 255);
 }
 
 .show-sidebar {
@@ -978,6 +979,39 @@ form input:-webkit-autofill {
   background-color: initial !important;
 }
 
+/* Para navegadores WebKit (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 10px;
+  /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #088;
+  /* Cor da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #008888;
+  /* Cor da barra de rolagem quando o cursor passa por cima */
+}
+
+/* Para navegadores Firefox */
+/* Nota: O Firefox ainda usa uma abordagem mais antiga para estilizar barras de rolagem */
+/* A estilização pode variar entre diferentes versões do Firefox */
+scrollbar {
+  width: 10px;
+}
+
+scrollbar-thumb {
+  background-color: #088;
+  /* Cor da barra de rolagem */
+}
+
+scrollbar-thumb:hover {
+  background-color: #008888;
+  /* Cor da barra de rolagem quando o cursor passa por cima */
+}
+
 input::placeholder,
 textarea::placeholder {
   color: rgba(14, 14, 14, 0.394);
@@ -1177,6 +1211,41 @@ div.accept-box {
 .accept-box label {
   margin-left: 5px;
   font-size: medium;
+}
+
+.header-news {
+  background-color: #008080;
+}
+
+.single-news-banner {
+  background-color: #519595;
+  color: rgb(253, 253, 253);
+  border: 3px solid black;
+  height: 300px;
+  width: 100vw;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.news-text-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.news-text {
+  width: 80vw;
+  margin-top: 30px;
+  box-shadow: 0px 0px 10px #888888;
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  padding: 30px 60px;
 }
 
 @media (max-width: 500px) {

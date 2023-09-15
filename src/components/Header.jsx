@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Header(props) {
   return (
-    <header className='header fade-in'>
+    <header className={`header fade-in ${props.page === "/news" && "header-news"}`}>
       <div className='header-title'>
         <Link to="/" className='logo-link'>
           <img src={logo} alt="Logo do titulo" className='logo' />
