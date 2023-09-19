@@ -5,10 +5,10 @@ import video from '../video/faq-bg.mp4';
 import image from '../images/faq.png';
 import AskReply from '../components/AskReply';
 import FaqForm from '../components/FaqForm';
+import Footer from '../components/Footer';
 
 function Faq() {
   const [backgroundLoaded, setBackgroundLoaded] = useState(false);
-  const [renderOthers, setRenderOthers] = useState(false);
   const [faqAsk, setFaqAsk] = useState('');
   const data =
     [
@@ -33,13 +33,11 @@ function Faq() {
   useEffect(() => {
     setTimeout(() => {
       setBackgroundLoaded(true);
-      const timeout = setTimeout(() => { setRenderOthers(true) }, 1000)
-      return () => clearTimeout(timeout);
     }, 1000);
   }, []);
 
   const filteredData = data.filter((item) =>
-    item.ask.toLowerCase().includes(faqAsk.toLowerCase())
+    item.ask.toLowerCase().includes(faqAsk.toLowerCase()) || item.reply.toLowerCase().includes(faqAsk.toLowerCase())
   );
 
   return (
@@ -51,48 +49,46 @@ function Faq() {
       {
         backgroundLoaded && (
           <>
-            <Header page='/faq' />
+            <Header page='faq' />
             <SideNavBar />
-            {
-              renderOthers && (
-                <div className='faq-main fade-in'>
-                  <div className='faq-image-container'>
-                    <img className='faq-image' src={image} alt="capa da pagina" />
-                  </div>
-                  <div className='faq-search'>
-                    <label htmlFor="faqAsk">O que você está procurando?</label>
-                    <input
-                      type="text"
-                      id="faqAsk"
-                      name="faqAsk"
-                      placeholder="Procure aqui"
-                      autoComplete="off"
-                      value={faqAsk}
-                      onChange={(e) => setFaqAsk(e.target.value)}
-                      required
-                    />
-                  </div>
-                  <span>Dica: use palavras chave</span>
-                  <div className='ask-container'>
-                    {
 
-                      filteredData.map((elem, index) => (
-                        <AskReply key={index} data={elem} />
-                      ))
-                    }
-                    {
-                      !filteredData[0] && (
-                        <div className='faq-not-found'>
-                          <h1>Não está encontrando o que procura?</h1>
-                          <h1>Mande sua dúvida:</h1>
-                          <FaqForm />
-                        </div>
-                      )
-                    }
-                  </div>
-                </div>
-              )
-            }
+            <div className='faq-main fade-in'>
+              <div className='faq-image-container'>
+                <img className='faq-image' src={image} alt="capa da pagina" />
+              </div>
+              <div className='faq-search'>
+                <label htmlFor="faqAsk">O que você está procurando?</label>
+                <input
+                  type="text"
+                  id="faqAsk"
+                  name="faqAsk"
+                  placeholder="Palavra chave"
+                  autoComplete="off"
+                  value={faqAsk}
+                  onChange={(e) => setFaqAsk(e.target.value)}
+                  required
+                />
+              </div>
+              <div className='ask-container'>
+                {
+
+                  filteredData.map((elem, index) => (
+                    <AskReply key={index} data={elem} />
+                  ))
+                }
+                {
+                  !filteredData[0] && (
+                    <div className='faq-not-found'>
+                      <h1>Não está encontrando o que procura?</h1>
+                      <h1>Mande sua dúvida:</h1>
+                      <FaqForm />
+                    </div>
+                  )
+                }
+              </div>
+            </div>
+
+            <Footer />
           </>
         )
       }

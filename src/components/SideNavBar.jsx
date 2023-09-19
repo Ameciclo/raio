@@ -14,6 +14,7 @@ function SideNavBar() {
         <a href='/' onClick={() => setNavBarListOn(false)}>INÍCIO</a>
         <a href='/contato' onClick={() => setNavBarListOn(false)}>CONTATO</a>
         <a href='/faq' onClick={() => setNavBarListOn(false)}>FAQ</a>
+        <a href='/news' onClick={() => setNavBarListOn(false)}>NOTÍCIAS</a>
       </nav>
     </>
   );

@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import SideNavBar from '../components/SideNavBar';
 import video from '../video/home-bg.mp4';
 import logo from '../images/logo1.png';
+import Footer from '../components/Footer';
 
 function Home() {
   const [backgroundLoaded, setBackgroundLoaded] = useState(false);
@@ -74,19 +75,7 @@ function Home() {
                     </div>
                     <a href='/contato' className='contact-link-btn'>Quero fazer parceria!</a>
                   </div>
-                  <footer>
-                    <img src={logo} className='' alt='LOAClima Logo'></img>
-                    <aside>
-                      <a href="/contato">Contato</a>
-                      <a href="/faq">FAQ</a>
-                      <a href="https://dados.ameciclo.org/observatorio">Observatório</a>
-                    </aside>
-                    <aside>
-                      <a href="https://dados.ameciclo.org/">Dados da Ameciclo</a>
-                      <a href="/contact">Notícias</a>
-                      <a href="/https://www.ameciclo.org">Site da Ameciclo</a>
-                    </aside>
-                  </footer>
+                  <Footer />
                 </>
               )
             }
