@@ -11,7 +11,7 @@ function App() {
         <Route exact path="/" element={ <Home /> } />
         <Route path="/contato" element={ <Contact /> } />
         <Route path="/faq" element={ <Faq /> } />
-        <Route path="/news/1" element={ <SingleNews /> } />
+        <Route path="/news/:id" element={ <SingleNews /> } />
         <Route path="/news" element={ <News /> } />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

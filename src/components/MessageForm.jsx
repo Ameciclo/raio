@@ -275,7 +275,7 @@ const MessageForm = () => {
                         <label htmlFor="other">Outra</label>
                       </div>
                       {showOtherInput && (
-                        <div className="message-form">
+                        <div className="message-form fade-in">
                           <label htmlFor="otherActivity">Informe a outra atividade:</label>
                           <input
                             type="text"
