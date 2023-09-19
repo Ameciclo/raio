@@ -9,7 +9,6 @@ import Footer from '../components/Footer';
 
 function Faq() {
   const [backgroundLoaded, setBackgroundLoaded] = useState(false);
-  const [renderOthers, setRenderOthers] = useState(false);
   const [faqAsk, setFaqAsk] = useState('');
   const data =
     [
@@ -34,8 +33,6 @@ function Faq() {
   useEffect(() => {
     setTimeout(() => {
       setBackgroundLoaded(true);
-      const timeout = setTimeout(() => { setRenderOthers(true) }, 1000)
-      return () => clearTimeout(timeout);
     }, 1000);
   }, []);
 

@@ -1136,7 +1136,7 @@ div.contact-group-activity {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .faq-image {
@@ -1233,6 +1233,10 @@ div.accept-box {
 }
 
 .header-news {
+  background-color: #008080;
+}
+
+.header-faq {
   background-color: #008080;
 }
 
