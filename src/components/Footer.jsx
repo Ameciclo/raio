@@ -4,7 +4,7 @@ import logo from '../images/logo1.png'
 function Footer() {
 
   return (
-    <footer>
+    <footer className='fade-in'>
       <img src={logo} className='' alt='LOAClima Logo'></img>
       <aside>
         <a href="/contato">Contato</a>
