@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 import './styles/app.css';
-import {Home, NotFoundPage, Contact, Faq, SingleNews, News} from './pages';
+import {Home, NotFoundPage, Contact, Faq, SingleNews, News, Developing} from './pages';
 import AppProvider from './context/AppProvider';
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
         <Route path="/faq" element={ <Faq /> } />
         <Route path="/noticias/:id" element={ <SingleNews /> } />
         <Route path="/noticias" element={ <News /> } />
+        <Route path="/observatorio" element={ <Developing /> } />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </AppProvider>

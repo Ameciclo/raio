@@ -10,16 +10,18 @@ function Navbar(props) {
     <>
       <nav className='navbar'>
         <a href='/' className={navIsActive(props.page, '/') && 'nav-active'}>INÍCIO</a>
-        <a href='/observatorio' className={navIsActive(props.page, '/observatorio') && 'nav-active'}>OBSERVATÓRIO</a>
+        <a href='/observatorio' className={navIsActive(props.page, '/dev') && 'nav-active'}>OBSERVATÓRIO
+          <div className='nav-dev'>Em breve!</div>
+        </a>
         <a href='/noticias' className={navIsActive(props.page, '/noticias') && 'nav-active'}>NOTÍCIAS</a>
         <a href='/contato' className={navIsActive(props.page, '/contato') && 'nav-active'}>CONTATO</a>
         <a href='/faq' className={navIsActive(props.page, '/faq') && 'nav-active'}>FAQ</a>
       </nav>
-        <button className="hamburger" onClick={() => setNavBarListOn(!navBarListOn)}>
-          <div></div>
-          <div></div>
-          <div></div>
-        </button>
+      <button className="hamburger" onClick={() => setNavBarListOn(!navBarListOn)}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
     </>
   );
 }
