@@ -1400,6 +1400,7 @@ div.accept-box {
   height: 45px;
   margin-bottom: 7px;
   background-color: #00000000;
+  border: none;
 }
 
 .hamburger div {
