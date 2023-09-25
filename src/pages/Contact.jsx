@@ -25,7 +25,7 @@ function Contact() {
       {
         backgroundLoaded && (
           <>
-            <Header page='/contact' />
+            <Header page='contato' />
             {
               renderOthers && (
                 <>

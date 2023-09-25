@@ -26,7 +26,7 @@ function Home() {
       {
         backgroundLoaded && (
           <>
-            <Header page='/home' />
+            <Header page=''/>
             {
               renderOthers && (
                 <>

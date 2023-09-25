@@ -3,7 +3,7 @@ import React from 'react';
 function NewsCard(props) {
   const news = props.data
   return (
-    <a href={`/news/${news.id}`} className='news-card'>
+    <a href={`/noticias/${news.id}`} className='news-card'>
       <img src={news.img} alt={news.img} />
       <div className='news-card-text'>
         <div className='news-card-text-gradient'></div>
