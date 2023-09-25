@@ -12,19 +12,19 @@ function Home() {
   const [renderOthers, setRenderOthers] = useState(false);
   const [dataLoa, setDataLoa] = useState({});
 
-  axios.get('https://cms.ameciclo.org/projects')
+  useEffect(() => {
+    axios.get('https://cms.ameciclo.org/projects')
     .then(function (response) {
       const data = response.data.find(function (project) {
         return project.name === 'LOACLIMA';
       });
-
+      console.log(data);
       setDataLoa(data);
     })
     .catch(function (error) {
       console.log(error);
     });
-
-  useEffect(() => {
+    
     const  timeout = setTimeout(() => {
       setBackgroundLoaded(true);
       const timeout = setTimeout(() => { setRenderOthers(true) }, 1000)
