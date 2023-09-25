@@ -1414,6 +1414,10 @@ div.accept-box {
 }
 
 @media (max-width: 500px) {
+  .home-title {
+    margin-top: 30px;   
+  }
+  
   .news-text {
     display: flex;
     flex-direction: column;

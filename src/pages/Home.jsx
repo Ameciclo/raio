@@ -4,13 +4,28 @@ import SideNavBar from '../components/SideNavBar';
 import video from '../video/home-bg.mp4';
 import logo from '../images/logo1.png';
 import Footer from '../components/Footer';
+import CardPartner from '../components/CardPartner';
+const axios = require('axios');
 
 function Home() {
   const [backgroundLoaded, setBackgroundLoaded] = useState(false);
   const [renderOthers, setRenderOthers] = useState(false);
+  const [dataLoa, setDataLoa] = useState({});
+
+  axios.get('https://cms.ameciclo.org/projects')
+    .then(function (response) {
+      const data = response.data.find(function (project) {
+        return project.name === 'LOACLIMA';
+      });
+
+      setDataLoa(data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 
   useEffect(() => {
-    setTimeout(() => {
+    const  timeout = setTimeout(() => {
       setBackgroundLoaded(true);
       const timeout = setTimeout(() => { setRenderOthers(true) }, 1000)
       return () => clearTimeout(timeout);
@@ -26,7 +41,7 @@ function Home() {
       {
         backgroundLoaded && (
           <>
-            <Header page=''/>
+            <Header page='' />
             {
               renderOthers && (
                 <>
@@ -39,7 +54,7 @@ function Home() {
                       <div className='stack-loop'>
                         <span>Monitoramento | Avaliação | Propóstas</span>
                       </div>
-                      <p>Faça parte do projeto LOAClima e contribua com um futuro sustentável para Pernambuco!</p><br />
+                      <p>{dataLoa.goal}</p><br />
                       <a href='/contato' className="glow-on-hover">
                         CONTATO  ➜
                       </a>
@@ -48,8 +63,7 @@ function Home() {
                   </div>
                   <div className='home-text-about'>
                     <h2>O que é o LOAClima?</h2><br />
-                    <p>O LOAClima é um projeto de incidência política nas leis orçamentárias do Governo do Estado de Pernambuco, com foco no monitoramento, avaliação e propostas na aplicação de recursos financeiros. </p><br />
-                    <p>O projeto trabalha a alocação de recursos para mitigação e adaptação às <mark>mudanças climáticas</mark>, no que concerne à <mark>mobilidade urbana sustentável</mark>, buscando alinhamento com as diretrizes da <a href='https://antigo.mdr.gov.br/images/stories/ArquivosSEMOB/cartilha_lei_12587.pdf'>Política Nacional de Mobilidade Urbana</a>, bem como as ações previstas no <a href="https://legis.alepe.pe.gov.br/texto.aspx?tiponorma=1&numero=14090&complemento=0&ano=2010&tipo=&url=">Plano Estadual de Mudanças Climáticas</a> e no <a href='https://semas.pe.gov.br/wp-content/uploads/2022/03/2022_03_16_GIZ_plano_descarbonizacao_pernambuco-v6_reduzido.pdf'>Plano de Descarbonização de Pernambuco</a>.</p>
+                    <p>{dataLoa.description}</p>
                   </div>
                   <div className='home-faq'>
                     <h2>Perguntas Frequêntes</h2>
@@ -68,11 +82,9 @@ function Home() {
                   </div>
                   <div className='home-partners'>
                     <h2>Parcerias</h2>
-                    <div className='card-container'>
-                      <a className='partner-card' href="https://gestos.org.br/">
-                        <img src={"https://res.cloudinary.com/plpbs/image/upload/v1689873101/thumbnail_Logomarca_da_Gestos_6267e342ab.png"} className='' alt='Logo da Gestos'></img>
-                      </a>
-                    </div>
+                    {
+                      dataLoa.partners.map((partner) => <CardPartner partner={partner} />)
+                    }
                     <a href='/contato' className='contact-link-btn'>Quero fazer parceria!</a>
                   </div>
                   <Footer />

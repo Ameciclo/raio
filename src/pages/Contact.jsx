@@ -9,11 +9,13 @@ function Contact() {
   const [renderOthers, setRenderOthers] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
+    const  timeout = setTimeout(() => {
       setBackgroundLoaded(true);
       const timeout = setTimeout(() => { setRenderOthers(true) }, 1000)
       return () => clearTimeout(timeout);
     }, 1000);
+    
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
