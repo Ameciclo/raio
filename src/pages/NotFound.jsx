@@ -14,6 +14,8 @@ function NotFoundPage() {
       const timeout = setTimeout(() => { setRenderOthers(true) }, 1000)
       return () => clearTimeout(timeout);
     }, 1000);
+
+    return () => clearTimeout(timeout);
   }, []);
 
   return (

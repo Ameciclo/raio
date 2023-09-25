@@ -30,6 +30,8 @@ function Home() {
       const timeout = setTimeout(() => { setRenderOthers(true) }, 1000)
       return () => clearTimeout(timeout);
     }, 1000);
+
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
@@ -83,7 +85,7 @@ function Home() {
                   <div className='home-partners'>
                     <h2>Parcerias</h2>
                     {
-                      dataLoa.partners.map((partner) => <CardPartner partner={partner} />)
+                      dataLoa.partners && dataLoa.partners.map((partner) => <CardPartner partner={partner} />)
                     }
                     <a href='/contato' className='contact-link-btn'>Quero fazer parceria!</a>
                   </div>
