@@ -9,7 +9,7 @@ function Navbar(props) {
   return (
     <>
       <nav className='navbar'>
-        <a href='/' className={navIsActive(props.page, '/') && 'nav-active'}>INÍCIO</a>
+        <a href='/' className={navIsActive(props.page, '/home') && 'nav-active'}>INÍCIO</a>
         <a href='/observatorio' className={navIsActive(props.page, '/dev') && 'nav-active'}>OBSERVATÓRIO
           <div className='nav-dev'>Em breve!</div>
         </a>
