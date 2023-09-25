@@ -31,7 +31,7 @@ function Faq() {
     ]
 
   useEffect(() => {
-    setTimeout(() => {
+    const  timeout = setTimeout(() => {
       setBackgroundLoaded(true);
     }, 1000);
   }, []);
