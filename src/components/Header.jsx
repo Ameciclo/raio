@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
-import logo from '../images/logo1.png'
+import logo from '../images/LOGO-LOA-11-branco-2.png'
 import { Link } from 'react-router-dom';
 
 function Header(props) {
@@ -26,9 +26,6 @@ function Header(props) {
       <div className='header-title'>
         <Link to="/" className='logo-link'>
           <img src={logo} alt="Logo do titulo" className='logo' />
-          <div className='header-name'>
-            <h1>LOAClima</h1><span>Monitoramento | Avaliação | Propóstas</span>
-          </div>
         </Link>
       </div>
       <NavBar page={props.page} />

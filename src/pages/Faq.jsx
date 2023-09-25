@@ -34,6 +34,8 @@ function Faq() {
     const  timeout = setTimeout(() => {
       setBackgroundLoaded(true);
     }, 1000);
+
+    return () => clearTimeout(timeout);
   }, []);
 
   const filteredData = data.filter((item) =>

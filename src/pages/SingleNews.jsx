@@ -59,7 +59,7 @@ function SingleNews() {
 
   return (
     <>
-      <Header page='news' />
+      <Header page='noticias' />
       <SideNavBar />
       <div className='news-pg fade-in'>
         <div className="single-news-banner">

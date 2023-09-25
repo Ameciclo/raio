@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../components/Header'
 import SideNavBar from '../components/SideNavBar';
 import video from '../video/home-bg.mp4';
-import logo from '../images/logo1.png';
+import logo from '../images/LOGO-LOACLIMA-fundo-transparente.png';
 import Footer from '../components/Footer';
 import CardPartner from '../components/CardPartner';
 const axios = require('axios');
@@ -42,16 +42,13 @@ function Home() {
       {
         backgroundLoaded && (
           <>
-            <Header page='' />
+            <Header page='home' />
             {
               renderOthers && (
                 <>
                   <SideNavBar />
                   <div className='fade-in home-cover'>
                     <div className='home-text-cover'>
-                      <div className='home-title'>
-                        <h1 className='LOA-title'>LOA</h1><h1 className='Clima-title'>Clima</h1>
-                      </div>
                       <div className='stack-loop'>
                         <span>Monitoramento | Avaliação | Propóstas</span>
                       </div>

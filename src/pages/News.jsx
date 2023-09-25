@@ -58,7 +58,7 @@ function News() {
   
   return (
     <>
-      <Header page='news' />
+      <Header page='noticias' />
       <SideNavBar />
       <div className='news-pg'>
         <div class="news-banner">
