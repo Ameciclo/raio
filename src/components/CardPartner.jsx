@@ -5,7 +5,6 @@ function CardPartner(props) {
       <a className='partner-card' href={partner.url}>
         <img src={partner.logo.formats.thumbnail.url} alt={partner.logo.name}></img>
       </a>
-      <p>{partner.name}</p>
     </div>
   );
 }
