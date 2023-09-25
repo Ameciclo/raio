@@ -18,13 +18,12 @@ function Home() {
       const data = response.data.find(function (project) {
         return project.name === 'LOACLIMA';
       });
-      console.log(data);
       setDataLoa(data);
     })
     .catch(function (error) {
       console.log(error);
     });
-    
+
     const  timeout = setTimeout(() => {
       setBackgroundLoaded(true);
       const timeout = setTimeout(() => { setRenderOthers(true) }, 1000)
