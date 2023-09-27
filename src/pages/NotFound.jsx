@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import SideNavBar from '../components/SideNavBar';
 import video from '../video/home-bg.mp4'
 import gif404 from '../images/404.gif'
+import Footer from '../components/Footer';
 
 function NotFoundPage() {
   const [backgroundLoaded, setBackgroundLoaded] = useState(false);
@@ -27,7 +28,7 @@ function NotFoundPage() {
       {
         backgroundLoaded && (
           <>
-            <Header />
+            <Header page='dev' />
             {
               renderOthers && (
                 <>
@@ -50,6 +51,7 @@ function NotFoundPage() {
                 </>
               )
             }
+            <Footer />
           </>
         )
       }
