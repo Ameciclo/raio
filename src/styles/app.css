@@ -626,9 +626,11 @@ aside a {
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
+  background-color: #0005;
 }
 
 .gif-404 {
+  margin-top: 100px;
   width: auto;
   border-radius: 30px;
   opacity: 0.7;
@@ -640,7 +642,7 @@ aside a {
   width: 100%;
   justify-content: center;
   align-items: center;
-  color: #8d7f01bc;
+  color: #ffffff;
   font-size: 30px;
 }
 
@@ -653,7 +655,6 @@ aside a {
 .text-404 p {
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
-  color: yellow;
 }
 
 .text-dev {
@@ -672,10 +673,11 @@ aside a {
 }
 
 .home-button {
-  border: 1px solid #408755;
   border-radius: 5px;
-  padding: 5px 10px 5px 10px;
+  padding: 10px 20px;
   font-size: larger;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 50px;
 }
 
 .contact-container-bg {
@@ -1620,9 +1622,9 @@ div.accept-box {
   .notfound-container {
     font-weight: 100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: auto;
+    height: 100vh;
     width: 100vw;
     padding-top: 77px;
     padding-left: 40px;
@@ -1631,6 +1633,7 @@ div.accept-box {
   }
 
   .gif-404 {
+    margin-top: 0;
     width: 300px;
   }
 
@@ -1671,10 +1674,8 @@ div.accept-box {
     width: 100%;
     justify-content: center;
     align-items: flex-start;
-    color: #8d7f01bc;
     font-size: 20px;
     font-family: 'Montserat', sans-serif;
-    font-weight: 700;
   }
 
   .home-button {
