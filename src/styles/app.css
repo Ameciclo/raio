@@ -229,7 +229,7 @@ a {
 
 .home-cover {
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -438,7 +438,7 @@ a {
   font-family: 'ubuntu', sans-serif;
   font-size: 30px;
   border-bottom: 1px solid white;
-  color: #008888;
+  color: #1d9371;
 }
 
 .faq-card {
@@ -448,7 +448,7 @@ a {
   align-items: center;
   justify-content: center;
   font-size: large;
-  background-color: #008080bd;
+  background-color: #1d9371f0;
   border-radius: 20px;
   margin: 10px;
   color: white;
