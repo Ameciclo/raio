@@ -64,7 +64,7 @@ function Home() {
                     <p>{dataLoa.description}</p>
                   </div>
                   <div className='home-faq'>
-                    <h2>Perguntas Frequêntes</h2>
+                    <h2>Dúvidas Frequentes</h2>
                     <div className='card-container'>
                       <a className='faq-card' href='/faq'>
                         <h3>O que é LOA?</h3>
