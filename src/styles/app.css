@@ -180,16 +180,16 @@ a {
   justify-content: center;
   align-items: center;
   position: fixed;
-  background-color: rgb(0 255 255);
+  background-color: #088;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  color: rgb(0, 0, 0);
-  top: 107px;
-  width: 50px;
-  height: 77px;
-  transition: transform 0.5s ease-in-out;
+  left: 20px;
+  top: 70px;
+  width: 30px;
+  height: 300px;
+  transition: transform 0.2s ease-in-out;
   transform: translateX(37.5vw);
-  z-index: 999;
+  z-index: 99;
 }
 
 .slide-out-btn-off {
