@@ -16,7 +16,7 @@ function Home() {
     axios.get('https://cms.ameciclo.org/projects')
     .then(function (response) {
       const data = response.data.find(function (project) {
-        return project.name === 'LOACLIMA';
+        return project.name === 'LOAClima';
       });
       setDataLoa(data);
     })
