@@ -7,14 +7,15 @@ function Footer() {
     <footer className='fade-in'>
       <img src={logo} className='' alt='LOAClima Logo'></img>
       <aside>
-        <a href="/contato">Contato</a>
-        <a href="/faq">FAQ</a>
-        <a href="https://dados.ameciclo.org/observatorio">Observatório</a>
+        <a href="https://dados.ameciclo.org/" target='_blank' rel="noreferrer">Dados da Ameciclo</a>
+        <a href="https://dados.ameciclo.org/observatorio" target='_blank' rel="noreferrer">Observatório Cicloviário</a>
+        <a href="https://www.ameciclo.org" target='_blank' rel="noreferrer">Site da Ameciclo</a>
       </aside>
       <aside>
-        <a href="https://dados.ameciclo.org/">Dados da Ameciclo</a>
-        <a href="/contact">Notícias</a>
-        <a href="/https://www.ameciclo.org">Site da Ameciclo</a>
+        <a href="/observatorio">Observatório</a>
+        <a href="/contato">Contato</a>
+        <a href="/faq">FAQ</a>
+        <a href="/noticias">Notícias</a>
       </aside>
     </footer>
   );

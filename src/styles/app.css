@@ -1423,9 +1423,9 @@ div.accept-box {
 
 @media (max-width: 500px) {
   .home-title {
-    margin-top: 30px;   
+    margin-top: 30px;
   }
-  
+
   .news-text {
     display: flex;
     flex-direction: column;
@@ -1442,7 +1442,7 @@ div.accept-box {
     align-items: center;
     margin-bottom: 30px;
   }
-  
+
   .news-pg #news-text-img {
     width: 100%;
     margin-right: 0px;
@@ -1461,6 +1461,7 @@ div.accept-box {
     font-size: 5vw;
     margin: 20px;
   }
+
   .nav-dev {
     margin: -15px 0 0 100px;
     font-size: 10px;
@@ -1595,6 +1596,7 @@ div.accept-box {
   .home-text-about {
     flex-direction: column;
   }
+
   .home-text-about p {
     text-align: justify;
     font-size: 20px;
@@ -1630,6 +1632,7 @@ div.accept-box {
     padding-left: 40px;
     padding-right: 40px;
     margin-right: 0;
+    background-color: #0007;
   }
 
   .gif-404 {
