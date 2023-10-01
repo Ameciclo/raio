@@ -11,28 +11,39 @@ function SingleNews() {
 
   useEffect(() => {
     async function fetchSingleNewsData() {
-      const data = await singleNewsApi(id)
-      setDataNews(data)
-      console.log(data)
+      const { attributes } = await singleNewsApi(id)
+      setDataNews(attributes)
     }
 
     return fetchSingleNewsData();
-  }, []);
+  }, [id]);
 
   return (
     <>
       <Header page='noticias' />
       <SideNavBar />
-      <div className='news-pg fade-in'>
-        <div className="single-news-banner">
-          <h1>{dataNews.attributes.title}</h1>
-          <p>{dataNews.attributes.subtitle}</p>
-        </div>
+      {console.log(dataNews.img)}
+      {
+        dataNews.img && (
+          <>
+            <div className='news-pg fade-in'>
+              <div className="single-news-banner">
+                <h1>{dataNews.title}</h1>
+                <p>{dataNews.subtitle}</p>
+              </div>
 
-        <p className='news-text'><div><img id='news-text-img' src={`https://test.cms.ameciclo.org${dataNews.attributes.img.data.attributes.formats.large.url}`} alt={dataNews.alt} />
-          <span>{dataNews.attributes.imgDescription}</span></div>{dataNews.attributes.text}</p>
-      </div>
-      <Footer />
+              <p className='news-text'>
+                <div>
+                  <img id='news-text-img' src={`https://test.cms.ameciclo.org${dataNews.img.data.attributes.formats.large.url}`} alt={dataNews.imgDescription} />
+                  <span>{dataNews.imgDescription}</span>
+                </div>
+                {dataNews.text}
+              </p>
+            </div>
+            < Footer />
+          </>
+        )
+      }
     </>
   );
 }

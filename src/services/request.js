@@ -6,6 +6,7 @@ async function newsApi() {
     const { data } = response.data;
     return data;
   } catch (error) {
+    console.log(error)
     alert(error);
     return [];
   }
@@ -17,6 +18,7 @@ async function singleNewsApi(id) {
     const { data } = response.data;
     return data;
   } catch (error) {
+    console.log(error)
     alert(error);
     return [];
   }

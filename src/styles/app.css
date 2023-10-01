@@ -1326,6 +1326,7 @@ div.accept-box {
   margin: 0 20px;
   display: flex;
   flex-direction: column;
+  white-space: pre-wrap;
   color: black;
   overflow: hidden;
   background: linear-gradient(to bottom, transparent 0%, transparent 40%, #fff 100%);
@@ -1337,6 +1338,7 @@ div.accept-box {
 }
 
 .news-card-text span {
+  margin-bottom: 5px;
   width: 100%;
   color: #0005;
 }
@@ -1363,12 +1365,20 @@ div.accept-box {
   box-shadow: 0px 0px 10px #888888;
   font-family: 'Arial', sans-serif;
   color: black;
-  font-size: 20px;
   display: flex;
   justify-content: center;
   text-align: justify;
-  word-wrap: normal;
+  white-space: pre-wrap;
+  word-wrap: break-word;
   padding: 30px 60px;
+}
+
+.news-text div span {
+  font-size: 13px;
+}
+
+.news-text div img {
+  box-shadow: 0px 0px 5px #888888;
 }
 
 .news-card-text-gradient {
@@ -1428,20 +1438,19 @@ div.accept-box {
   }
 
   .news-text {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
-    font-size: 20px;
   }
 
   .news-text div {
+    margin-bottom: 30px;
+  }
+
+  .news-text p {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
+
+    font-size: 10px;
   }
 
   .news-pg #news-text-img {
@@ -1502,6 +1511,7 @@ div.accept-box {
     overflow: none;
     text-overflow: none;
     transition: width 0.2s, height 0.2s;
+
   }
 
   .news-card-text {
