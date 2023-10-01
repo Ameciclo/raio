@@ -8,29 +8,19 @@ import CardPartner from '../components/CardPartner';
 const axios = require('axios');
 
 function Home() {
-  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
-  const [renderOthers, setRenderOthers] = useState(false);
   const [dataLoa, setDataLoa] = useState({});
 
   useEffect(() => {
     axios.get('https://cms.ameciclo.org/projects')
-    .then(function (response) {
-      const data = response.data.find(function (project) {
-        return project.name === 'LOAClima';
+      .then(function (response) {
+        const data = response.data.find(function (project) {
+          return project.name === 'LOAClima';
+        });
+        setDataLoa(data);
+      })
+      .catch(function (error) {
+        console.log(error);
       });
-      setDataLoa(data);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-
-    const  timeout = setTimeout(() => {
-      setBackgroundLoaded(true);
-      const timeout = setTimeout(() => { setRenderOthers(true) }, 1000)
-      return () => clearTimeout(timeout);
-    }, 1000);
-
-    return () => clearTimeout(timeout);
   }, []);
 
   return (
@@ -39,59 +29,47 @@ function Home() {
         <source src={video} type="video/mp4" />
         Seu navegador não suporta a reprodução de vídeo.
       </video>
-      {
-        backgroundLoaded && (
-          <>
-            <Header page='home' />
-            {
-              renderOthers && (
-                <>
-                  <SideNavBar />
-                  <div className='fade-in home-cover'>
-                    <div className='home-text-cover'>
-                      <div className='stack-loop'>
-                        <span>Monitoramento | Avaliação | Propóstas</span>
-                      </div>
-                      <p>{dataLoa.goal}</p><br />
-                      <a href='/contato' className="glow-on-hover">
-                        CONTATO  ➜
-                      </a>
-                    </div>
-                    <img src={logo} className='home-cover-logo' alt='LOAClima Logo'></img>
-                  </div>
-                  <div className='home-text-about'>
-                    <h2>O que é o LOAClima?</h2><br />
-                    <p>{dataLoa.description}</p>
-                  </div>
-                  <div className='home-faq'>
-                    <h2>Dúvidas Frequentes</h2>
-                    <div className='card-container'>
-                      <a className='faq-card' href='/faq'>
-                        <h3>O que é LOA?</h3>
-                      </a>
-                      <a className='faq-card' href='/faq'>
-                        <h3>O que é PPA?</h3>
-                      </a>
-                      <a className='faq-card' href='/faq'>
-                        <h3>O que é LDO?</h3>
-                      </a>
-                    </div>
-                    <a href='/contato' className='contact-link-btn'>Faça uma pergunta!</a>
-                  </div>
-                  <div className='home-partners'>
-                    <h2>Parcerias</h2>
-                    {
-                      dataLoa.partners && dataLoa.partners.map((partner) => <CardPartner partner={partner} />)
-                    }
-                    <a href='/contato' className='contact-link-btn'>Quero fazer parceria!</a>
-                  </div>
-                  <Footer />
-                </>
-              )
-            }
-          </>
-        )
-      }
+      <Header page='home' />
+      <SideNavBar />
+      <div className='fade-in home-cover'>
+        <div className='home-text-cover'>
+          <div className='stack-loop'>
+            <span>Monitoramento | Avaliação | Propóstas</span>
+          </div>
+          <p>{dataLoa.goal}</p><br />
+          <a href='/contato' className="glow-on-hover">
+            CONTATO  ➜
+          </a>
+        </div>
+        <img src={logo} className='home-cover-logo' alt='LOAClima Logo'></img>
+      </div>
+      <div className='home-text-about'>
+        <h2>O que é o LOAClima?</h2><br />
+        <p>{dataLoa.description}</p>
+      </div>
+      <div className='home-faq'>
+        <h2>Dúvidas Frequentes</h2>
+        <div className='card-container'>
+          <a className='faq-card' href='/faq'>
+            <h3>O que é LOA?</h3>
+          </a>
+          <a className='faq-card' href='/faq'>
+            <h3>O que é PPA?</h3>
+          </a>
+          <a className='faq-card' href='/faq'>
+            <h3>O que é LDO?</h3>
+          </a>
+        </div>
+        <a href='/contato' className='contact-link-btn'>Faça uma pergunta!</a>
+      </div>
+      <div className='home-partners'>
+        <h2>Parcerias</h2>
+        {
+          dataLoa.partners && dataLoa.partners.map((partner) => <CardPartner partner={partner} />)
+        }
+        <a href='/contato' className='contact-link-btn'>Quero fazer parceria!</a>
+      </div>
+      <Footer />
     </>
   );
 }

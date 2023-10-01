@@ -22,7 +22,7 @@ function Header(props) {
   }, []);
 
   return (
-    <header className={`header ${headerBackground} fade-in header-${props.page}`}>
+    <header className={`header ${headerBackground} header-${props.page}`}>
       <div className='header-title'>
         <Link to="/" className='logo-link'>
           <img src={logo} alt="Logo do titulo" className='logo' />
