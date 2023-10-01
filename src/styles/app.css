@@ -662,7 +662,7 @@ aside a {
   flex-direction: column;
   width: 50%;
   justify-content: flex-start;
-  align-items: start;
+  align-items: flex-start;
   color: #000;
   font-size: 24px;
   font-family: 'Roboto', sans-serif;
@@ -1302,8 +1302,8 @@ div.accept-box {
   box-shadow: 0px 3px 10px #00000060;
   margin-bottom: 20px;
   display: flex;
-  justify-content: start;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   transition: width 0.2s;
 }
 
