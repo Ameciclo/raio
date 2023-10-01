@@ -1208,6 +1208,7 @@ div.contact-group-activity {
   flex-direction: column;
   font-size: 15px;
   padding: 10px;
+  text-align: justify;
 }
 
 div.accept-box {
