@@ -2003,11 +2003,21 @@ div.accept-box {
 
   .hamburger {
     display: flex;
-    background: transparent;
-    font-size: 40px;
+    flex-direction: column;
+    height: 40px;
+    margin-bottom: 7px;
+    background-color: #00000000;
     border: none;
-    outline: none;
-    color: rgba(231, 241, 40, 0.414);
+  }
+
+  .hamburger div {
+    position: relative;
+    width: 30px;
+    height: 10px;
+    border-radius: 0px;
+    background-color: #ffffff84;
+    margin-top: 8px;
+    transition: all 0.3s ease-in-out;
   }
 
   .notfound-container {
