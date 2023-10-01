@@ -66,10 +66,6 @@ const FaqForm = () => {
   const func = { setError, setSucess, scrollToTop }
 
   useEffect(() => {
-    console.log(selectedAreas);
-  }, [selectedAreas]);
-
-  useEffect(() => {
     if (error) {
       const timeout = setTimeout(() => {
         setError(false);

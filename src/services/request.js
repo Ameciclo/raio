@@ -24,4 +24,15 @@ async function singleNewsApi(id) {
   }
 };
 
-export { newsApi, singleNewsApi };
+async function faqApi(id) {
+  try {
+    const response = await axios.get('https://cms.ameciclo.org/faqs');
+    return response.data;
+  } catch (error) {
+    console.log(error)
+    alert(error);
+    return [];
+  }
+};
+
+export { newsApi, singleNewsApi, faqApi };
