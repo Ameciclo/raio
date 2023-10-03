@@ -1,5 +1,17 @@
 import axios from "axios";
 
+async function homeContentAPI() {
+  try {
+    const response = await axios.get('https://cms.ameciclo.org/projects');
+    const LOAClimaContent = response.data.find(function (project) {
+      return project.name === 'LOAClima';
+    });
+    return LOAClimaContent;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 async function newsApi() {
   try {
     const response = await axios.get('https://test.cms.ameciclo.org/api/posts?populate=*');
@@ -35,4 +47,4 @@ async function faqApi(id) {
   }
 };
 
-export { newsApi, singleNewsApi, faqApi };
+export { newsApi, singleNewsApi, faqApi, homeContentAPI };
