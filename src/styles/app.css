@@ -59,25 +59,52 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
   font-family: 'ubuntu', sans-serif;
-  background-color: #00888818;
   backdrop-filter: blur(7px);
-  border-bottom: 3px solid rgba(255, 60, 0, 0.436);
-  color: rgba(255, 255, 255, 0.846);
   z-index: 999;
-  transition: background-color 1s, color 1s;
+  transition: background-color 1s, color 1s, height 0.5s;
 }
 
-.scroll-efect {
-  background-color: #088;
+.header-home {
+  height: 100px;
+  background-color: #ffffff00;
+  color: #1d9371;
+}
+
+.header-home img {
+  display: none;
+}
+
+.header-noticias {
+  background-color: #008080;
+}
+
+.header-faq {
+  background-color: #008080;
+}
+
+.header-contato {
+  background-color: #008080;
+}
+
+.header-dev {
+  background-color: #008080;
 }
 
 .scroll-efect img {
+  display: inherit;
   height: 120px;
   width: 120px;
   margin-top: 20px;
   margin-bottom: 10px
+}
+
+.scroll-efect {
+  background-color: #1d9371;
+  color: rgba(255, 255, 255, 0.846);
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.368);
+  height: 60px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;900&family=Orbitron&family=Raleway:wght@100;700&family=Six+Caps&display=swap');
@@ -235,6 +262,7 @@ a {
   align-items: center;
   background-color: rgba(7, 255, 152, 0);
   justify-content: space-around;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&family=Raleway:wght@100;700&display=swap');
@@ -397,30 +425,36 @@ a {
 .home-text-about {
   width: 100vw;
   display: flex;
-  padding: 20px;
-  padding-top: 100px;
-  padding-bottom: 77px;
+  padding: 100px 20vw;
   justify-content: space-around;
   align-items: center;
   font-family: 'ubuntu', sans-serif;
-  background-color: #1d9371;
-  font-size: 25px;
+  background-color: white;
+  color: #1d9371;
 }
 
-.home-text-about a {
-  text-decoration: none;
-  color: white;
-  border-bottom: 1px solid #d9f88586;
+.home-text-about h1 {
+  text-align: start;
+  font-size: 50px;
+  margin-bottom: 30px;
 }
 
 .home-text-about p {
-  max-width: 700px;
   text-align: justify;
-  color: #f5f8f8;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.home-text-about img {
+  margin: 50px;
+  border-radius: 50%;
+  width: 30%;
+  overflow-x: hide;
+  box-shadow: 0 0 20px #1d9371;
 }
 
 .card-container {
-  width: 80vw;
+  width: 100%;
   display: flex;
   margin: 20px;
   justify-content: space-around;
@@ -429,34 +463,34 @@ a {
 .home-faq {
   width: 100vw;
   display: flex;
-  padding: 20px;
-  padding-top: 100px;
-  padding-bottom: 77px;
+  padding: 30px 20vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: 'ubuntu', sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   border-bottom: 1px solid white;
   color: #1d9371;
+  background-color: white;
 }
 
 .faq-card {
-  width: 400px;
-  height: 150px;
+  width: 100%;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: large;
-  background-color: #1d9371f0;
+  background-color: #1d9371;
   border-radius: 20px;
   margin: 10px;
   color: white;
   cursor: pointer;
+  box-shadow: 0 10px 20px #1d9371;
 }
 
 .faq-card:hover {
-  background-color: rgba(1, 88, 88, 0.548);
+  background-color: red;
 }
 
 .contact-link-btn {
@@ -466,7 +500,7 @@ a {
   font-family: 'Montserrat', sans-serif;
   font-size: medium;
   color: white;
-  border: 1px solid #008080;
+  border: 1px solid #1d9371;
   border-radius: 7px;
 }
 
@@ -662,7 +696,7 @@ aside a {
   flex-direction: column;
   width: 50%;
   justify-content: flex-start;
-  align-items: start;
+  align-items: flex-start;
   color: #000;
   font-size: 24px;
   font-family: 'Roboto', sans-serif;
@@ -678,6 +712,53 @@ aside a {
   font-size: larger;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 50px;
+}
+
+.home-proposals {
+  width: 100vw;
+  height: 100%;
+  font-family: 'ubuntu', sans-serif;
+  color: #1d9371;
+  background-color: #ffffff;
+  padding: 30px 20vw 60px 20vw;
+  text-align: justify;
+}
+
+.home-proposals h1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.home-proposals h2 {
+  padding: 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.home-proposals h2:hover {
+  background-color: red;
+  color: white;
+}
+
+.home-last-news {
+  width: 100vw;
+  height: 100%;
+  font-family: 'ubuntu', sans-serif;
+  color: #1d9371;
+  background-color: #ffffff;
+  padding: 60px 20vw 100px 20vw;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-last-news h1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .contact-container-bg {
@@ -704,7 +785,6 @@ aside a {
   justify-content: space-around;
   align-items: center;
   filter: invert(0.8);
-  /* background-color: #ffdbc22e; */
 }
 
 .contact-icon {
@@ -1208,6 +1288,7 @@ div.contact-group-activity {
   flex-direction: column;
   font-size: 15px;
   padding: 10px;
+  text-align: justify;
 }
 
 div.accept-box {
@@ -1231,26 +1312,6 @@ div.accept-box {
 .accept-box label {
   margin-left: 5px;
   font-size: medium;
-}
-
-.header-home {
-  background-color: #1d9371;
-}
-
-.header-noticias {
-  background-color: #008080;
-}
-
-.header-faq {
-  background-color: #008080;
-}
-
-.header-contato {
-  background-color: #008080;
-}
-
-.header-dev {
-  background-color: #008080;
 }
 
 .news-pg {
@@ -1302,8 +1363,8 @@ div.accept-box {
   box-shadow: 0px 3px 10px #00000060;
   margin-bottom: 20px;
   display: flex;
-  justify-content: start;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   transition: width 0.2s;
 }
 
@@ -1324,7 +1385,9 @@ div.accept-box {
   height: 120px;
   margin: 0 20px;
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
+  white-space: pre-wrap;
   color: black;
   overflow: hidden;
   background: linear-gradient(to bottom, transparent 0%, transparent 40%, #fff 100%);
@@ -1336,6 +1399,7 @@ div.accept-box {
 }
 
 .news-card-text span {
+  margin-bottom: 5px;
   width: 100%;
   color: #0005;
 }
@@ -1344,7 +1408,6 @@ div.accept-box {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
   transition: width 0.2s;
 }
 
@@ -1362,12 +1425,20 @@ div.accept-box {
   box-shadow: 0px 0px 10px #888888;
   font-family: 'Arial', sans-serif;
   color: black;
-  font-size: 20px;
   display: flex;
   justify-content: center;
   text-align: justify;
-  word-wrap: normal;
+  white-space: pre-wrap;
+  word-wrap: break-word;
   padding: 30px 60px;
+}
+
+.news-text div span {
+  font-size: 13px;
+}
+
+.news-text div img {
+  box-shadow: 0px 0px 5px #888888;
 }
 
 .news-card-text-gradient {
@@ -1427,20 +1498,19 @@ div.accept-box {
   }
 
   .news-text {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
-    font-size: 20px;
   }
 
   .news-text div {
+    margin-bottom: 30px;
+  }
+
+  .news-text p {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
+
+    font-size: 10px;
   }
 
   .news-pg #news-text-img {
@@ -1501,6 +1571,7 @@ div.accept-box {
     overflow: none;
     text-overflow: none;
     transition: width 0.2s, height 0.2s;
+
   }
 
   .news-card-text {
@@ -1539,6 +1610,16 @@ div.accept-box {
     padding: 10px;
     z-index: 9999;
     top: 0;
+  }
+
+  .header-home {
+    width: 100vw;
+    height: 60px;
+    background-color: #1d9371;
+  }
+
+  .header img {
+    display: inline;
   }
 
   .header h1 {
@@ -1594,12 +1675,32 @@ div.accept-box {
   }
 
   .home-text-about {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    padding: 100px 15vw;
+    padding-bottom: 0;
+  }
+
+  .home-text-about img {
+    width: 80%;
   }
 
   .home-text-about p {
-    text-align: justify;
-    font-size: 20px;
+    text-align: start;
+    font-size: 15px;
+  }
+
+  .home-proposals {
+    padding: 100px 15vw;
+  }
+
+  .home-proposals h2 {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .home-last-news {
+    padding: 50px 5vw;
+    margin: 0;
   }
 
   .faq-card {
@@ -2003,11 +2104,21 @@ div.accept-box {
 
   .hamburger {
     display: flex;
-    background: transparent;
-    font-size: 40px;
+    flex-direction: column;
+    height: 40px;
+    margin-bottom: 7px;
+    background-color: #00000000;
     border: none;
-    outline: none;
-    color: rgba(231, 241, 40, 0.414);
+  }
+
+  .hamburger div {
+    position: relative;
+    width: 30px;
+    height: 10px;
+    border-radius: 0px;
+    background-color: #ffffff84;
+    margin-top: 8px;
+    transition: all 0.3s ease-in-out;
   }
 
   .notfound-container {
