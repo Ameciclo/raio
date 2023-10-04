@@ -31,6 +31,9 @@ function DevelopingPage() {
                 <h1>Em breve estará disponível!</h1>
                 <p>A página que você está procurando está em desenvolvimento agora...</p><br />
                 <br />
+                <a href='/observatorio' className="home-button">
+                  Veja como está ficando  ➜
+                </a>
                 <a href='/' className="home-button">
                   Página de início  ➜
                 </a>

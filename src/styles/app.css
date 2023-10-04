@@ -193,7 +193,7 @@ a {
   top: 0;
   height: 100%;
   width: 50vw;
-  background-color: rgba(0, 0, 0, 0.258);
+  background-color: #1d9371bf;
   color: rgb(127 245 243);
   border: none;
   backdrop-filter: blur(20px);
@@ -207,7 +207,7 @@ a {
   justify-content: center;
   align-items: center;
   position: fixed;
-  background-color: #088;
+  background-color: #1d9371;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   left: 20px;
@@ -539,8 +539,6 @@ a {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
   width: 100vw;
   height: 200px;
   display: flex;
@@ -1495,6 +1493,179 @@ div.accept-box {
   border-radius: 7px;
 }
 
+.observatory-pg {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.observatory-banner {
+  height: 20vw;
+  width: 100%;
+  background-image: url('../images/observatory-banner.jpg');
+  background-size: cover;
+  background-position: 0px -50px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #ccc;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.595);
+  text-align: center;
+}
+
+.observatory-banner h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
+  color: #088;
+  text-shadow: 5px 10px black;
+  text-transform: uppercase;
+}
+
+.observatory-area {
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 50px;
+  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.131);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.data-cards {
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
+  width: 80%;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.display-flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.collaboration-card {
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 1px 1px black;
+  text-align: center;
+  font-size: 1vw;
+  border-radius: 5px;
+  width: 35%;
+  height: 50%;
+  background-color: rgba(0, 128, 0, 0.7);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.degradation-card {
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 1px 1px black;
+  text-align: center;
+  font-size: 1vw;
+  border-radius: 5px;
+  width: 35%;
+  height: 50%;
+  background-color: red;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.emissions-card {
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  text-shadow: 1px 1px white;
+  text-align: center;
+  font-size: 1vw;
+  border-radius: 5px;
+  width: 35%;
+  background-color: rgba(128, 128, 128, 0.393);
+  height: 50%;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.budgeted-card {
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  text-shadow: 1px 1px white;
+  text-align: center;
+  font-size: 1vw;
+  border-radius: 5px;
+  width: 35%;
+  height: 50%;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.executed-card {
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  text-shadow: 1px 1px white;
+  text-align: center;
+  font-size: 1vw;
+  border-radius: 5px;
+  width: 35%;
+  height: 50%;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-container {
+  width: 80vw;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 1s ease-in-out;
+}
+
+.action-card {
+  width: 250px;
+  height: 280px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 15px;
+  color: #000;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  font-family: 'Montserrat', sans-serif;
+  margin: 5px;
+}
+
+.action-card p {
+  padding: 10px;
+  text-align: center;
+}
+
+.good-action {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+
+.bad-action {
+  background-color: rgba(128, 0, 0, 0.7);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @media (max-width: 500px) {
   .home-title {
     margin-top: 30px;
@@ -2083,6 +2254,50 @@ div.accept-box {
   .faq-image {
     width: 100vw;
   }
+
+  .observatory-banner {
+    height: 150px;
+    background-position: 0;
+  }
+
+  .observatory-banner h1 {
+    font-size: 30px;
+  }
+
+
+  .data-cards {
+    flex-direction: column;
+  }
+  .collaboration-card {
+    width: 50vw;
+    font-size: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .degradation-card {
+    width: 50vw;
+    font-size: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .emissions-card {
+    width: 50vw;
+    font-size: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .budgeted-card {
+    width: 50vw;
+    font-size: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .executed-card {
+    width: 50vw;
+    font-size: 10px;
+    margin-bottom: 50px;
+  }
+  
 
   footer {
     flex-direction: column-reverse;
