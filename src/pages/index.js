@@ -5,6 +5,7 @@ import Contact from './Contact';
 import Faq from './Faq';
 import SingleNews from './SingleNews';
 import News from './News';
+import Observatory from './Observatory';
 
 
-export {Home, NotFoundPage, Developing, Contact, Faq, SingleNews, News};
+export {Home, NotFoundPage, Developing, Contact, Faq, SingleNews, News, Observatory};

@@ -10,7 +10,7 @@ function Navbar(props) {
     <>
       <nav className='navbar'>
         <a href='/' className={navIsActive(props.page, '/home') && 'nav-active'}>INÍCIO</a>
-        <a href='/observatorio' className={navIsActive(props.page, '/dev') && 'nav-active'}>OBSERVATÓRIO
+        <a href='/observatorio/dev' className={navIsActive(props.page, '/dev') && 'nav-active'}>OBSERVATÓRIO
           <div className='nav-dev'>Em breve!</div>
         </a>
         <a href='/noticias' className={navIsActive(props.page, '/noticias') && 'nav-active'}>NOTÍCIAS</a>
