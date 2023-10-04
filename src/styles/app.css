@@ -472,6 +472,7 @@ a {
   border-bottom: 1px solid white;
   color: #1d9371;
   background-color: white;
+  text-align: center;
 }
 
 .faq-card {
@@ -1687,6 +1688,7 @@ div.accept-box {
   .home-text-about p {
     text-align: start;
     font-size: 15px;
+    text-align: justify;
   }
 
   .home-proposals {
