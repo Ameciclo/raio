@@ -19,7 +19,10 @@ async function newsApi() {
     return data;
   } catch (error) {
     console.log(error)
-    alert(error);
+    alert(`
+    Recarregue a pagina, se esse erro persistir entre em contato!
+     erro:${error}
+    `);
     return [];
   }
 };
@@ -31,7 +34,10 @@ async function singleNewsApi(id) {
     return data;
   } catch (error) {
     console.log(error)
-    alert(error);
+    alert(`
+    Recarregue a pagina, se esse erro persistir entre em contato!
+     erro:${error}
+    `);
     return [];
   }
 };
@@ -42,7 +48,10 @@ async function faqApi(id) {
     return response.data;
   } catch (error) {
     console.log(error)
-    alert(error);
+    alert(`
+    Recarregue a pagina, se esse erro persistir entre em contato!
+     erro:${error}
+    `);
     return [];
   }
 };
