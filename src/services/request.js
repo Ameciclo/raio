@@ -35,11 +35,7 @@ async function singleNewsApi(id) {
     return data;
   } catch (error) {
     console.log(error)
-    alert(`
-    Erro em pegar os dados da notícia: ${error}
-    Recarregue a página!
-    Se esse erro persistir entre em contato!
-    `);
+    window.location.reload()
     return [];
   }
 };
@@ -61,9 +57,8 @@ async function faqApi() {
 
 async function getActionsData() {
   try {
-    const response = await axios.get('https://dados.pe.gov.br/dataset/38401a88-5a99-4b21-99d2-2d4a36a241f1/resource/0a2e8fd7-7a65-46df-bd1b-15f2dfaaded7/download/acoes_e_programas_json_2021_20211231.json');
-    console.log(response)
-    return response.campos;
+    const response = await axios.get('http://localhost:8010/proxy/dataset/38401a88-5a99-4b21-99d2-2d4a36a241f1/resource/bd2f90f2-3cc1-4b46-ab8d-9b15a1b0d453/download/acoes_e_programas_json_2023_20231004.json');
+    return response.data.campos;
   } catch (error) {
     console.log(error)
     alert(`

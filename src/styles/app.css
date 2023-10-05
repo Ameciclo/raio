@@ -1537,13 +1537,25 @@ div.accept-box {
   align-items: center;
 }
 
+.observatory-area .observatory-titles {
+  color: #1d9371;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 10px;
+}
+
 .data-cards {
-  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
-  width: 80%;
-  height: 300px;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  color: #000;
+  padding: 50px 0 50px 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
 }
 
 .display-flex-center {
@@ -1553,72 +1565,55 @@ div.accept-box {
   justify-content: space-evenly;
 }
 
-.collaboration-card {
-  font-family: 'Montserrat', sans-serif;
-  text-shadow: 1px 1px black;
+.value-card {
+  color: #1d9371;
   text-align: center;
-  font-size: 1vw;
   border-radius: 5px;
-  width: 35%;
+  width: 500px;
   height: 50%;
-  background-color: rgba(0, 128, 0, 0.7);
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 }
 
-.degradation-card {
+.value-card h1 {
+  font-size: 40px;
   font-family: 'Montserrat', sans-serif;
-  text-shadow: 1px 1px black;
-  text-align: center;
-  font-size: 1vw;
-  border-radius: 5px;
-  width: 35%;
-  height: 50%;
-  background-color: red;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
 }
 
-.emissions-card {
+.value-card h3 {
   font-family: 'Montserrat', sans-serif;
-  color: #000;
-  text-shadow: 1px 1px white;
-  text-align: center;
-  font-size: 1vw;
-  border-radius: 5px;
-  width: 35%;
-  background-color: rgba(128, 128, 128, 0.393);
-  height: 50%;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  color: #1d9371;
+  font-size: 20px;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
 }
 
-.budgeted-card {
-  font-family: 'Montserrat', sans-serif;
-  color: #000;
-  text-shadow: 1px 1px white;
-  text-align: center;
-  font-size: 1vw;
-  border-radius: 5px;
-  width: 35%;
-  height: 50%;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+.good-value {
+  color: green;
 }
 
-.executed-card {
-  font-family: 'Montserrat', sans-serif;
-  color: #000;
-  text-shadow: 1px 1px white;
-  text-align: center;
-  font-size: 1vw;
-  border-radius: 5px;
-  width: 35%;
-  height: 50%;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+.bad-value {
+  color: red;
+}
+
+.carbon-value {
+  color: grey;
 }
 
 .carousel-container {
   width: 80vw;
-  height: 300px;
+  height: 450px;
   overflow: hidden;
   position: relative;
+  margin-bottom: 20px;
+}
+
+.carousel-container h1 {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
+  margin-left: 20px;
 }
 
 .carousel-track {
@@ -1628,24 +1623,26 @@ div.accept-box {
 }
 
 .action-card {
-  width: 250px;
-  height: 280px;
+  width: 300px;
+  height: 400px;
   flex-shrink: 0;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  align-items: start;
+  justify-content: start;
   font-size: 15px;
   color: #000;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 5px;
+  padding: 20px;
 }
 
-.action-card p {
-  padding: 10px;
-  text-align: center;
+
+.action-card span {
+  padding: 20px 0 3px 0;
+  font-size: 10px;
 }
 
 .good-action {
@@ -1656,7 +1653,18 @@ div.accept-box {
   background-color: rgba(128, 0, 0, 0.7);
 }
 
-@keyframes scroll {
+@keyframes good-scroll {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(10%);
+  }
+}
+
+
+@keyframes bad-scroll {
   0% {
     transform: translateX(10%);
   }
@@ -1718,6 +1726,7 @@ div.accept-box {
     margin-bottom: 7px;
     background-color: #00000000;
     border: none;
+    margin-right: 15px;
   }
 
   .hamburger div {
@@ -2261,44 +2270,80 @@ div.accept-box {
   }
 
   .observatory-banner h1 {
+    text-shadow: 2px 5px black;
     font-size: 30px;
   }
 
+  .observatory-area .observatory-titles {
+    font-size: 20px;
+  }
+
+  .value-card h3 {
+    font-size: 15px;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
+  }
+
+  .value-card h1 {
+    font-size: 30px;
+  }
 
   .data-cards {
     flex-direction: column;
+    padding-bottom: 0;
   }
-  .collaboration-card {
-    width: 50vw;
-    font-size: 10px;
-    margin-bottom: 50px;
-  }
-  
-  .degradation-card {
-    width: 50vw;
-    font-size: 10px;
-    margin-bottom: 50px;
-  }
-  
-  .emissions-card {
-    width: 50vw;
-    font-size: 10px;
-    margin-bottom: 50px;
-  }
-  
-  .budgeted-card {
-    width: 50vw;
-    font-size: 10px;
-    margin-bottom: 50px;
-  }
-  
-  .executed-card {
-    width: 50vw;
-    font-size: 10px;
-    margin-bottom: 50px;
-  }
-  
 
+  .value-card {
+    width: 50vw;
+    font-size: 10px;
+    margin-bottom: 50px;
+  }
+
+  .carousel-container {
+    width: 80vw;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-container h1 {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
+    margin: 20px;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+  }
+
+  .action-card {
+    width: 200px;
+    height: 310px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    font-size: 10px;
+    color: #000;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto', sans-serif;
+    margin: 5px;
+    padding: 20px;
+  }
+
+  .action-card span {
+    padding: 20px 0 3px 0;
+    font-size: 8px;
+  }
+  
   footer {
     flex-direction: column-reverse;
     height: auto;
@@ -2363,6 +2408,7 @@ div.accept-box {
     margin-left: 50px;
     margin-right: 50px;
   }
+
 }
 
 @media (min-width: 1500px) {
