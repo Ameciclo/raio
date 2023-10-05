@@ -1541,7 +1541,7 @@ div.accept-box {
   color: #1d9371;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
   font-family: 'Montserrat', sans-serif;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 100;
   text-align: center;
   margin-top: 10px;
@@ -1582,7 +1582,7 @@ div.accept-box {
 .value-card h3 {
   font-family: 'Montserrat', sans-serif;
   color: #1d9371;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 100;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
 }
@@ -1604,6 +1604,16 @@ div.accept-box {
   height: 450px;
   overflow: hidden;
   position: relative;
+  margin-bottom: 20px;
+}
+
+.carousel-container h1 {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
+  margin-left: 20px;
 }
 
 .carousel-track {
@@ -1716,6 +1726,7 @@ div.accept-box {
     margin-bottom: 7px;
     background-color: #00000000;
     border: none;
+    margin-right: 15px;
   }
 
   .hamburger div {
@@ -2288,13 +2299,51 @@ div.accept-box {
     margin-bottom: 50px;
   }
 
-  .display-flex-center {
+  .carousel-container {
+    width: 80vw;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-container h1 {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
+    margin: 20px;
+  }
+  
+  .carousel-track {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
   }
 
+  .action-card {
+    width: 200px;
+    height: 310px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    font-size: 10px;
+    color: #000;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto', sans-serif;
+    margin: 5px;
+    padding: 20px;
+  }
+
+  .action-card span {
+    padding: 20px 0 3px 0;
+    font-size: 8px;
+  }
+  
   footer {
     flex-direction: column-reverse;
     height: auto;

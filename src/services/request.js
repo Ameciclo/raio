@@ -35,11 +35,7 @@ async function singleNewsApi(id) {
     return data;
   } catch (error) {
     console.log(error)
-    alert(`
-    Erro em pegar os dados da notícia: ${error}
-    Recarregue a página!
-    Se esse erro persistir entre em contato!
-    `);
+    window.location.reload()
     return [];
   }
 };

@@ -167,7 +167,7 @@ function Observatory() {
                       <h1><AnimatedNumber initialValue={0} finalValue={totalValueExecuted} duration={1000} /></h1>
                     </LazyLoad>
                   </div>
-                </div><br />
+                </div><br /><br /><br /><br />
                 <LazyLoad height={400} offset={50}>
                   <ActionCarousel actions={totalGoodActions.slice(0, 15)} goodAction={true} />
                 </LazyLoad>

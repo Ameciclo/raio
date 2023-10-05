@@ -26,6 +26,7 @@ const ActionsCarousel = ({ actions, goodAction = false }) => {
 
   return (
     <div className="carousel-container fade-in">
+      <h1>{goodAction ? 'Ações que AVANÇAM na proteção do clima:' : 'Ações que REGRIDEM na luta contra a crise climática:'}</h1>
       <div
         className="carousel-track"
         style={{
