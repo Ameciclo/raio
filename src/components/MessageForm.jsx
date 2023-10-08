@@ -118,7 +118,6 @@ const MessageForm = () => {
         ) : (
           <>
             <form className="message-form">
-              <div className="message-form-bg" />
               <div className='message-form-inputs'>
                 <label htmlFor="branch-name">Nome</label>
                 <input

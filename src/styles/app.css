@@ -77,19 +77,19 @@ a {
 }
 
 .header-noticias {
-  background-color: #008080;
+  background-color: #1d9371;
 }
 
 .header-faq {
-  background-color: #008080;
+  background-color: #1d9371;
 }
 
 .header-contato {
-  background-color: #008080;
+  background-color: #1d9371;
 }
 
 .header-dev {
-  background-color: #008080;
+  background-color: #1d9371;
 }
 
 .scroll-efect img {
@@ -762,32 +762,6 @@ aside a {
   margin-bottom: 20px;
 }
 
-.contact-container-bg {
-  position: absolute;
-  width: 85%;
-  height: 40vh;
-  border-radius: 20px;
-  top: 30%;
-  left: 7%;
-  filter: blur(10px);
-  backdrop-filter: blur(1px);
-  background-color: #25abff0f;
-}
-
-.contact-content {
-  position: absolute;
-  width: 85%;
-  height: 40vh;
-  top: 30%;
-  left: 7%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  filter: invert(0.8);
-}
-
 .contact-icon {
   width: 200px;
   transition: transform 1s ease;
@@ -916,7 +890,7 @@ aside a {
   font-weight: bolder;
   line-height: 0.8;
   font-size: 500%;
-  color: #008080;
+  color: #1d9371;
   margin-bottom: 40px;
 }
 
@@ -924,12 +898,12 @@ aside a {
   font-family: 'Montserrat', sans-serif;
   font-weight: lighter;
   font-size: 150%;
-  color: #008888;
+  color: #1d9371;
 }
 
 mark {
-  color: white;
-  background-color: #0080805e;
+  color: black;
+  background-color: #1d93712d;
   font-weight: 300px;
 }
 
@@ -940,17 +914,6 @@ mark {
   height: auto;
 }
 
-.message-form-bg {
-  position: fixed;
-  width: 51%;
-  height: 93vh;
-  filter: blur(10px);
-  backdrop-filter: blur(1px);
-  background-color: #016f7b0e;
-  z-index: -1;
-  right: 0;
-}
-
 .message-form .group-check {
   width: 100%;
   display: flex;
@@ -959,6 +922,19 @@ mark {
   align-items: center;
   font-size: 20px;
   justify-content: flex-start;
+}
+
+.message-form input, textarea {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  padding-left: 10px;
+  box-shadow: 0 0 5px black;
 }
 
 .message-form .group-check div:hover {
@@ -997,7 +973,6 @@ mark {
 
 .message-form {
   width: 100%;
-  height: 100%;
   background-color: #25abff0f;
   z-index: 2;
   display: flex;
@@ -1006,8 +981,8 @@ mark {
   align-items: flex-start;
   font-family: 'Montserrat', sans-serif;
   font-weight: lighter;
-  font-size: 20px;
-  color: #fbfbf99a;
+  font-size: 18px;
+  color: black;
 }
 
 .message-form-bg-sucess {
@@ -1183,7 +1158,6 @@ div.contact-group-activity {
 }
 
 .submmit-message-btn {
-  align-self: flex-flex-start;
   padding: 7px 17px 7px 17px;
   margin-bottom: 50px;
   border-radius: 7px;
@@ -1296,6 +1270,10 @@ div.accept-box {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+}
+
+div.accept-box input, label {
+  margin: 0;
 }
 
 .lgpdArea p {
@@ -1520,7 +1498,7 @@ div.accept-box {
 .observatory-banner h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 70px;
-  color: #088;
+  color: #1d9371;
   text-shadow: 5px 10px black;
   text-transform: uppercase;
 }
@@ -1538,6 +1516,7 @@ div.accept-box {
 }
 
 .observatory-area .observatory-titles {
+  max-width: 500px;
   color: #1d9371;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
   font-family: 'Montserrat', sans-serif;
@@ -1555,7 +1534,6 @@ div.accept-box {
   align-items: center;
   color: #000;
   padding: 50px 0 50px 0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
 }
 
 .display-flex-center {
@@ -1574,9 +1552,13 @@ div.accept-box {
 }
 
 .value-card h1 {
+  font-size: 70px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.value-card h2 {
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
 }
 
 .value-card h3 {
@@ -1584,11 +1566,6 @@ div.accept-box {
   color: #1d9371;
   font-size: 20px;
   font-weight: 100;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
-}
-
-.good-value {
-  color: green;
 }
 
 .bad-value {
@@ -1605,6 +1582,7 @@ div.accept-box {
   overflow: hidden;
   position: relative;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .carousel-container h1 {
@@ -1666,7 +1644,7 @@ div.accept-box {
 
 @keyframes bad-scroll {
   0% {
-    transform: translateX(10%);
+    transform: translateX(0%);
   }
 
   100% {
@@ -1998,12 +1976,7 @@ div.accept-box {
     top: 600px;
   }
 
-  .contact-text h4 {
-    display: none;
-  }
-
   .message-form-bg-sucess {
-    position: absolute;
     width: 80%;
     height: 45%;
     filter: blur(10px);
@@ -2036,12 +2009,13 @@ div.accept-box {
   }
 
   .main-contact {
+    width: 50px;
+    height: auto;
     padding: 37px;
     display: flex;
     flex-direction: column;
     padding-top: 85px;
     align-items: flex-start;
-    width: 50px;
   }
 
   .contact-text {
@@ -2058,7 +2032,6 @@ div.accept-box {
     font-weight: bolder;
     line-height: 0.8;
     font-size: 50px;
-    color: #0196a0c0;
     margin-bottom: 10px;
     z-index: 9;
   }
@@ -2067,8 +2040,7 @@ div.accept-box {
     font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
     width: 80vw;
-    font-size: 20px;
-    color: #6bffeb63;
+    font-size: 15px;
     z-index: 99;
   }
 
@@ -2120,22 +2092,9 @@ div.accept-box {
     align-items: flex-start;
     justify-content: center;
     width: 80vw;
-    height: 30px;
-  }
-
-  .message-form-bg {
-    width: 80vw;
-    height: 90vh;
-    top: 10vh;
-    right: 10vw;
-    filter: blur(10px);
-    backdrop-filter: blur(1px);
-    background-color: #00000017;
-    border: 1px solid #01f2ff;
   }
 
   .message-form {
-    height: auto;
     z-index: 2;
     padding: 0px;
     display: flex;
@@ -2160,7 +2119,9 @@ div.accept-box {
     border: none;
     border-radius: 10px;
     margin-bottom: 15px;
+    margin-top: 5px;
     padding-left: 10px;
+    box-shadow: 0 0 5px black;
   }
 
   form input:focus,
@@ -2213,10 +2174,6 @@ div.accept-box {
 
   .sucess-message {
     height: 40px;
-  }
-
-  .message-form-container {
-    height: 500px;
   }
 
   .stack-loop {
@@ -2281,7 +2238,6 @@ div.accept-box {
   .value-card h3 {
     font-size: 15px;
     font-weight: 100;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
   }
 
   .value-card h1 {

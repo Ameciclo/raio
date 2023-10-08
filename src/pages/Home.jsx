@@ -43,7 +43,7 @@ function Home() {
       <div className='fade-in home-cover'>
         <div className='home-text-cover'>
           <div className='stack-loop'>
-            <span>Monitoramento | Avaliação | Propóstas</span>
+            <span>Monitoramento | Avaliação | Propostas</span>
           </div>
           <p>{dataLoa.goal}</p><br />
           <a href='/contato' className="glow-on-hover">
