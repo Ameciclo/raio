@@ -76,6 +76,10 @@ a {
   display: none;
 }
 
+.header-propostas {
+  background-color: #1d9371;
+}
+
 .header-noticias {
   background-color: #1d9371;
 }
@@ -722,7 +726,6 @@ aside a {
   color: #1d9371;
   background-color: #ffffff;
   padding: 30px 20vw 60px 20vw;
-  text-align: justify;
 }
 
 .home-proposals h1 {
@@ -739,6 +742,27 @@ aside a {
 }
 
 .home-proposals h2:hover {
+  background-color: red;
+  color: white;
+}
+
+.card-proposals {
+  width: 60vw;
+  margin: 10px;
+  height: 100%;
+  font-family: 'ubuntu', sans-serif;
+  color: #1d9371;
+  background-color: #ffffff;
+}
+
+.card-proposals h2 {
+  padding: 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.card-proposals h2:hover {
   background-color: red;
   color: white;
 }
@@ -931,8 +955,6 @@ mark {
   font-family: 'Montserrat', sans-serif;
   border: none;
   border-radius: 10px;
-  margin-bottom: 15px;
-  margin-top: 5px;
   padding-left: 10px;
   box-shadow: 0 0 5px black;
 }
@@ -1103,16 +1125,20 @@ textarea::placeholder {
 }
 
 div.contact-group-activity {
+  height: 40px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .contact-group-activity input {
-  width: 25px;
-  height: auto;
+  width: 20px;
+  height: 20px;
+  box-shadow: none;
 }
 
 .contact-group-activity label {
+  margin-top: 0;
   margin-left: 5px;
   font-size: medium;
 }
@@ -1324,6 +1350,30 @@ div.accept-box input, label {
   text-transform: uppercase;
 }
 
+.proposals-banner {
+  height: 25vw;
+  width: 100%;
+  background-image: url('../images/proposals-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #ccc;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.595);
+  text-align: center;
+}
+
+.proposals-banner h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
+  color: #1d9371;
+  text-shadow: 5px 10px black;
+  text-transform: uppercase;
+}
+
 .news-area {
   width: 80%;
   margin-top: 50px;
@@ -1428,6 +1478,27 @@ div.accept-box input, label {
 }
 
 .single-news-banner {
+  height: 20vw;
+  width: 100vw;
+  background-image: url('../images/LOGO-LOACLIMA-SIMBOLO-fundo-transparente.png');
+  background-size: 100%;
+  background-position: center;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.595);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #088;
+  text-shadow: 1px 1px black;
+  font-family: 'Ubuntu', Courier, monospace;
+  font-size: 2vw;
+}
+
+.single-proposal-banner {
   height: 20vw;
   width: 100vw;
   background-image: url('../images/LOGO-LOACLIMA-SIMBOLO-fundo-transparente.png');
@@ -1724,6 +1795,20 @@ div.accept-box input, label {
     margin: 20px;
   }
 
+  .single-proposal-banner {
+    height: 100px;
+  }
+
+  .single-proposal-banner h1 {
+    margin-top: 20px;
+    font-size: 7vw;
+  }
+
+  .single-proposal-banner p {
+    font-size: 5vw;
+    margin: 20px;
+  }
+
   .nav-dev {
     margin: -15px 0 0 100px;
     font-size: 10px;
@@ -1777,6 +1862,14 @@ div.accept-box input, label {
   }
 
   .news-banner h1 {
+    font-size: 50px;
+  }
+
+  .proposals-banner {
+    height: 150px;
+  }
+
+  .proposals-banner h1 {
     font-size: 50px;
   }
 

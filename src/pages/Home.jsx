@@ -62,10 +62,12 @@ function Home() {
       <div className="home-proposals">
         <h1>Nossas Propostas</h1>
         <div className="proposals-card">
-          <h2>Destinar pelo menos 85% dos recursos de Mobilidade para a Mobilidade Sustentável</h2>
+          <h2><a href="/propostas/2">Destinar pelo menos 85% dos recursos de Mobilidade para a Mobilidade Sustentável!</a></h2>
           <br />
-          <h2>Plano Diretor Cicloviário da Região Metropolitana do Recife implementado nos próximos 4 anos</h2>
+          <h2><a href="/propostas/1">Plano Diretor Cicloviário da Região Metropolitana do Recife implementado nos próximos 4 anos!</a></h2>
         </div>
+        <br />
+        <a href='/propostas' className=''>Todas as propostas</a>
       </div>
       <div className="home-last-news">
         <h1>Últimas Notícias</h1>
@@ -74,6 +76,7 @@ function Home() {
             (singleNews) => <NewsCard data={singleNews} />
           )
         }
+        <a href='/noticias' className=''>Todas as notícias</a>
       </div>
       <div className='home-faq'>
         <h2>Dúvidas Frequentes</h2>
