@@ -129,36 +129,36 @@ const MessageForm = () => {
                   onChange={(e) => setName(e.target.value)}
                   required
                 />
-                <label htmlFor="email">E-mail</label>
+                <label htmlFor="email">Email</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="maria@gmail.com"
+                  placeholder="Email pra contato"
                   autoComplete="off"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
 
-                <label htmlFor="tel">DDD + Telefone</label>
+                <label htmlFor="tel">Celular</label>
                 <input
                   type="text"
                   id="tel"
                   name="tel"
-                  placeholder="81 987654321"
+                  placeholder="DDD + celular"
                   autoComplete="off"
                   value={phone}
                   onChange={(e) => setTel(e.target.value)}
                   required
                 />
 
-                <label htmlFor="local">Cidade + Estado</label>
+                <label htmlFor="local">Endereço</label>
                 <input
                   type="text"
                   id="local"
                   name="local"
-                  placeholder="Recife, Pernambuco"
+                  placeholder="Cidade, Estado"
                   autoComplete="off"
                   value={local}
                   onChange={(e) => setLocal(e.target.value)}
@@ -229,14 +229,14 @@ const MessageForm = () => {
                         type="text"
                         id="groupTel"
                         name="groupTel"
-                        placeholder="81 987654321"
+                        placeholder="DDD + Telefone"
                         autoComplete="off"
                         value={groupLiderPhone}
                         onChange={(e) => setGroupLiderPhone(e.target.value)}
                         required
                       />
 
-                      <label htmlFor="groupLocal">Cidade + Estado ou Países de atuação</label>
+                      <label htmlFor="groupLocal">Área(s) de atuação</label>
                       <input
                         type="text"
                         id="groupLocal"
@@ -262,14 +262,13 @@ const MessageForm = () => {
                           <label htmlFor={area.value}>{area.label}</label>
                         </div>
                       ))}
-                      <div key={"other"} className="contact-group-activity">
+                      <div className="contact-group-activity">
                         <input
                           type="checkbox"
                           id="other"
                           name="other"
                           value="Outra"
-                          checked={selectedAreas.includes('Outra')}
-                          onChange={(e) => handleOtherCheckboxChange()}
+                          onChange={(e) => handleOtherCheckboxChange(e.target.value)}
                         />
                         <label htmlFor="other">Outra</label>
                       </div>

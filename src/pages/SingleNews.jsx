@@ -22,7 +22,6 @@ function SingleNews() {
     <>
       <Header page='noticias' />
       <SideNavBar />
-      {console.log(dataNews.img)}
       {
         dataNews.img && (
           <>
