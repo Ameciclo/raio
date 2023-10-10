@@ -1866,6 +1866,7 @@ div.accept-box input, label {
   }
 
   .proposals-banner {
+    margin-top: 60px;
     height: 150px;
   }
 
