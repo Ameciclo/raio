@@ -1047,7 +1047,7 @@ function Observatory() {
           {
             renderOthers ? (
               <>
-                <h1 className='observatory-titles'>Quanto é investindo em ações que contribuem pro clima em Pernambuco</h1>
+                <h1 className='observatory-titles'>Quanto é investindo em ações que contribuem para o clima em Pernambuco</h1>
                 <div className="data-cards fade-in">
                   <div className="value-card display-flex-center good-value">
                     <LazyLoad height={400} offset={0}>
