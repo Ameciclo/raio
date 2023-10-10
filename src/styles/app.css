@@ -434,7 +434,7 @@ a {
 }
 
 .home-text-about h1 {
-  text-align: start;
+  text-align: flex-start;
   font-size: 50px;
   margin-bottom: 30px;
 }
@@ -1216,7 +1216,7 @@ div.contact-group-activity {
   width: 30vw;
   height: 50px;
   margin-top: 15px;
-  text-align: start;
+  text-align: flex-start;
   padding-left: 15px;
   background-color: #fcfcfc;
   color: rgb(13, 13, 13);
@@ -1515,6 +1515,29 @@ div.accept-box input, label {
   align-items: center;
 }
 
+.observatory-docs {
+  font-family: 'Roboto';
+  color: #1d9371;
+  width: 100%;
+  height: 110%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.observatory-docs div {
+  padding: 20px;
+}
+
+.observatory-area #att {
+  width: 100%;
+  color: #1d937175;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  margin-bottom: 20px;
+  text-align: end;
+}
+
 .observatory-area .observatory-titles {
   max-width: 500px;
   color: #1d9371;
@@ -1607,8 +1630,8 @@ div.accept-box input, label {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   font-size: 15px;
   color: #000;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
@@ -1650,6 +1673,17 @@ div.accept-box input, label {
   100% {
     transform: translateX(-100%);
   }
+}
+
+.loading-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading-gif {
+  width: 100px;
 }
 
 @media (max-width: 500px) {
@@ -1846,7 +1880,7 @@ div.accept-box input, label {
   }
 
   .home-text-about p {
-    text-align: start;
+    text-align: flex-start;
     font-size: 15px;
     text-align: justify;
   }
@@ -2228,7 +2262,11 @@ div.accept-box input, label {
 
   .observatory-banner h1 {
     text-shadow: 2px 5px black;
-    font-size: 30px;
+    font-size: 35px;
+  }
+
+  .observatory-area {
+    width: 100%;
   }
 
   .observatory-area .observatory-titles {
@@ -2241,7 +2279,7 @@ div.accept-box input, label {
   }
 
   .value-card h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .data-cards {
@@ -2285,8 +2323,8 @@ div.accept-box input, label {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     font-size: 10px;
     color: #000;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
