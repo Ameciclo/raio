@@ -903,9 +903,9 @@ aside a {
 }
 
 .contact-text {
-  position: fixed;
+  position: absolute;
   left: 2vw;
-  top: 30vh;
+  top: 200px;
   width: 45vw;
 }
 
