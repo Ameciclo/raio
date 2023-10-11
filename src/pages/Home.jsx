@@ -5,7 +5,6 @@ import video from '../video/home-bg.mp4';
 import logo from '../images/LOGO-LOACLIMA-fundo-transparente.png';
 import simpleLogo from '../images/LOGO-LOACLIMA-SIMBOLO-fundo-transparente.png';
 import Footer from '../components/Footer';
-import CardPartner from '../components/CardPartner';
 import { homeContentAPI, newsApi } from '../services/request';
 import NewsCard from '../components/NewsCard';
 
@@ -94,13 +93,6 @@ function Home() {
         <a href='/contato' className='contact-link-btn'>Faça uma pergunta!</a>
       </div>
       <div >
-      </div>
-      <div className='home-partners'>
-        <h2>Parcerias</h2>
-        {
-          dataLoa.partners && dataLoa.partners.map((partner) => <CardPartner partner={partner} />)
-        }
-        <a href='/contato' className='contact-link-btn'>Quero fazer parceria!</a>
       </div>
       <Footer />
     </>
