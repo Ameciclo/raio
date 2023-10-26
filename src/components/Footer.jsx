@@ -19,9 +19,11 @@ function Footer() {
     <>
       <div className='home-partners'>
         <h2>Parcerias</h2>
-        {
-          dataLoa && dataLoa.map((partner) => <CardPartner partner={partner} />)
-        }
+        <div className="parners-container">
+          {
+            dataLoa && dataLoa.map((partner) => <CardPartner partner={partner} />)
+          }
+        </div>
         <a href='/contato' className='contact-link-btn'>Quero fazer parceria!</a>
       </div>
       <footer className='fade-in'>

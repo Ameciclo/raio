@@ -8,18 +8,14 @@ import { getProposalsData } from '../services/request';
 function SingleProposal() {
   const { id } = useParams();
 
-  const [dataProposal, setDataProposal] = useState([
-    {id: 1, title: ''},
-    {id: 2, title: ''},
-  ])
-
-  const requestProposalData = async () => {
-    const data = await getProposalsData()
-    setDataProposal(data.find((proposal) => String(proposal.id) === id))
-  }
+  const [dataProposal, setDataProposal] = useState({ id: 1, attributes: { title: '' }})
 
   useEffect(()=>{
-    requestProposalData()
+    const requestProposalData = async () => {
+      const data = await getProposalsData()
+      setDataProposal(data.find((proposal) => String(proposal.id) === id))
+    }
+    return requestProposalData()
   }, [])
   
   return (
@@ -29,9 +25,9 @@ function SingleProposal() {
       <>
         <div className='news-pg fade-in'>
           <div className="single-proposal-banner">
-            <h1>{dataProposal.title}</h1>
+            <h1>{dataProposal.attributes.title}</h1>
           </div>
-          <p className='news-text'>{dataProposal.text}</p>
+          <p className='news-text'>{dataProposal.attributes.text}</p>
         </div>
         < Footer />
       </>

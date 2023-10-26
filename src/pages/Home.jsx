@@ -13,8 +13,8 @@ function Home() {
   const [dataLoa, setDataLoa] = useState({});
   const [dataNews, setDataNews] = useState([]);
   const [dataProposals, setDataProposals] = useState([
-    { id: 1, title: '' },
-    { id: 2, title: '' },
+    { id: 1, attributes: { title: '' } },
+    { id: 2, attributes: { title: '' } },
   ])
 
 
@@ -75,7 +75,8 @@ function Home() {
       </div>
       <div className="home-proposals">
         <h1>Nossas Propostas</h1>
-        {dataProposals.map((proposal) => <ProposalsCard data={proposal} />)}
+        {dataProposals.slice(-3).map((proposal) => <ProposalsCard data={proposal} />)}
+        <a href='/propostas' className=''>Todas as propostas</a>
       </div>
       <div className="home-last-news">
         <h1>Últimas Notícias</h1>

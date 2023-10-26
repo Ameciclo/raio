@@ -7,8 +7,8 @@ import { getProposalsData } from '../services/request';
 
 function Proposals() {
   const [dataProposals, setDataProposals] = useState([
-    {id: 1, title: ''},
-    {id: 2, title: ''},
+    { id: 1, attributes: { title: '' } },
+    { id: 2, attributes: { title: '' } },
   ])
 
   const requestProposalsData = async () => {

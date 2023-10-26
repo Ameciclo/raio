@@ -54,7 +54,7 @@ async function getProposalsData() {
   try {
     const response = await axios.get('https://test.cms.ameciclo.org/api/proposals');
     const { data } = response.data;
-    console.log(data)
+    
     return data;
   } catch (error) {
     throw new Error(error)
