@@ -13,7 +13,6 @@ function Proposals() {
 
   const requestProposalsData = async () => {
     const data = await getProposalsData()
-    console.log(data)
     setDataProposals(data)
   }
 

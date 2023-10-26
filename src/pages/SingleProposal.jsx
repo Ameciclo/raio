@@ -15,7 +15,6 @@ function SingleProposal() {
 
   const requestProposalData = async () => {
     const data = await getProposalsData()
-    console.log(data)
     setDataProposal(data.find((proposal) => String(proposal.id) === id))
   }
 

@@ -5,12 +5,17 @@ import video from '../video/home-bg.mp4';
 import logo from '../images/LOGO-LOACLIMA-fundo-transparente.png';
 import simpleLogo from '../images/LOGO-LOACLIMA-SIMBOLO-fundo-transparente.png';
 import Footer from '../components/Footer';
-import { homeContentAPI, newsApi } from '../services/request';
+import { getProposalsData, homeContentAPI, newsApi } from '../services/request';
 import NewsCard from '../components/NewsCard';
+import ProposalsCard from '../components/ProposalsCard';
 
 function Home() {
   const [dataLoa, setDataLoa] = useState({});
   const [dataNews, setDataNews] = useState([]);
+  const [dataProposals, setDataProposals] = useState([
+    { id: 1, title: '' },
+    { id: 2, title: '' },
+  ])
 
 
   useEffect(() => {
@@ -30,6 +35,16 @@ function Home() {
 
     return fetchNews();
   }, []);
+
+
+  useEffect(() => {
+    const requestProposalsData = async () => {
+      const data = await getProposalsData()
+      setDataProposals(data)
+    }
+
+    return requestProposalsData();
+  }, [])
 
   return (
     <>
@@ -60,13 +75,7 @@ function Home() {
       </div>
       <div className="home-proposals">
         <h1>Nossas Propostas</h1>
-        <div className="proposals-card">
-          <h2><a href="/propostas/2">Destinar pelo menos 85% dos recursos de Mobilidade para a Mobilidade Sustentável!</a></h2>
-          <br />
-          <h2><a href="/propostas/1">Plano Diretor Cicloviário da Região Metropolitana do Recife implementado nos próximos 4 anos!</a></h2>
-        </div>
-        <br />
-        <a href='/propostas' className=''>Todas as propostas</a>
+        {dataProposals.map((proposal) => <ProposalsCard data={proposal} />)}
       </div>
       <div className="home-last-news">
         <h1>Últimas Notícias</h1>
