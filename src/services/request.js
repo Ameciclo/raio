@@ -52,7 +52,7 @@ async function faqApi() {
 
 async function getObservatoryData() {
   try {
-    const request = await axios.get('http://localhost:1338/api/loaclima/observatory');
+    const request = await axios.get('https://test.cms.ameciclo.org/api/loaclima/observatory');
     if (request.status === 200) {
       return request.data;
     } else {
