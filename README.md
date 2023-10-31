@@ -73,7 +73,7 @@ O projeto utiliza o backend do [repositório quadro](https://github.com/Ameciclo
 - **ESLint Config Trybe Frontend (1.2.1)**: Configuração de ESLint específica para projetos Trybe Frontend.
 - **Web Vitals (1.1.2)**: Biblioteca para medir métricas de desempenho na web.
 
-Além disso, você tem dependências de desenvolvimento:
+Dependências de desenvolvimento:
 
 - **ESLint Plugin SonarJS (0.10.0)**: Plugin ESLint para regras específicas do SonarJS.
 - **Jest (26.6.0)**: Framework de teste JavaScript.
