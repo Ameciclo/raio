@@ -40,23 +40,23 @@ O projeto utiliza o backend do [repositório quadro](https://github.com/Ameciclo
 
 - **Página inicial**:
 
-  🔸 [cms.ameciclo.org/api/projects?name=LOAClima](http://cms.ameciclo.org/api/projects?name=LOAClima)
+  🔸 StrapiV3 - [cms.ameciclo.org/api/projects?name=LOAClima](http://cms.ameciclo.org/api/projects?name=LOAClima)
 - **Parceiros**:
 
-  🔸 [cms.ameciclo.org/api/projects?name=LOAClima](http://cms.ameciclo.org/api/projects?name=LOAClima)
+  🔸 StrapiV3 - [cms.ameciclo.org/api/projects?name=LOAClima](http://cms.ameciclo.org/api/projects?name=LOAClima)
 - **Propostas**: 
 
-  🔹 [test.cms.ameciclo.org/api/proposals](http://test.cms.ameciclo.org/api/proposals)
+  🔹 StrapiV4 - [test.cms.ameciclo.org/api/proposals](http://test.cms.ameciclo.org/api/proposals)
 - **Notícias**:
 
-  🔹 [test.cms.ameciclo.org/api/post](http://test.cms.ameciclo.org/api/post)
+  🔹 StrapiV4 - [test.cms.ameciclo.org/api/post](http://test.cms.ameciclo.org/api/post)
 - **Observatório**:
   - **Dados do observatório**:
   
-    🔹 [test.cms.ameciclo.org/api/loaclima/observatory](http://test.cms.ameciclo.org/api/loaclima/observatory)
+    🔹 StrapiV4 - [test.cms.ameciclo.org/api/loaclima/observatory](http://test.cms.ameciclo.org/api/loaclima/observatory)
   - **API que fornece o código das ações e programas para a API de dados do observatório**:
 
-    🔹 [test.cms.ameciclo.org/api/loaclimaobservatoryupdatedatas](http://test.cms.ameciclo.org/api/loaclimaobservatoryupdatedatas)
+    🔹 StrapiV4 - [test.cms.ameciclo.org/api/loaclimaobservatoryupdatedatas](http://test.cms.ameciclo.org/api/loaclimaobservatoryupdatedatas)
 
 ## Tecnologias
 - **React (17.0.2)**: Biblioteca JavaScript para criar interfaces de usuário.
