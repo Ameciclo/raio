@@ -2517,57 +2517,6 @@ label {
   }
 }
 
-/* 
-@media (min-width: 500px) and (max-width: 1000px) {
-  .navbar {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    height: 40px;
-    margin-bottom: 7px;
-    background-color: #00000000;
-    border: none;
-  }
-
-  .hamburger div {
-    position: relative;
-    width: 30px;
-    height: 10px;
-    border-radius: 0px;
-    background-color: #ffffff84;
-    margin-top: 8px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .notfound-container {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-  .text-404 {
-    margin-top: 10px;
-  }
-
-  .contact-container-bg {
-    top: 150px;
-    height: 1000px;
-  }
-
-  .contact-content {
-    top: 155px;
-  }
-
-  .contact-button {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-
-} */
-
 @media (min-width: 1500px) {
   .home-text-cover {
     font-size: 40px;
