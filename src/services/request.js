@@ -18,8 +18,7 @@ async function newsApi() {
     const { data } = response.data;
     return data;
   } catch (error) {
-    console.log('Dados 2020 Rodando em modo estático!')
-    window.location.reload()
+    console.log(error.status)
     return [];
   }
 };

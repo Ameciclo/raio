@@ -7,11 +7,13 @@ import AskReply from '../components/AskReply';
 import FaqForm from '../components/FaqForm';
 import Footer from '../components/Footer';
 import { faqApi } from '../services/request';
+import { useParams } from 'react-router-dom';
 
 function Faq() {
   const [faqAsk, setFaqAsk] = useState('');
   const [dataFaqs, setDataFaqs] = useState([]);
-
+  const { keyword } = useParams();
+  console.log(keyword)
   useEffect(() => {
     async function fetchData() {
       const data = await faqApi();
@@ -23,9 +25,10 @@ function Faq() {
           )
       );
     }
+    keyword && setFaqAsk(keyword)
 
     return fetchData();
-  }, []);
+  }, [keyword]);
 
 
   const filteredData = dataFaqs.filter((faq) =>
@@ -54,7 +57,9 @@ function Faq() {
             placeholder="Palavra chave"
             autoComplete="off"
             value={faqAsk}
-            onChange={(e) => setFaqAsk(e.target.value)}
+            onChange={(e) => {
+              setFaqAsk(e.target.value)
+            }}
             required
           />
         </div>
@@ -62,7 +67,7 @@ function Faq() {
           {
 
             filteredData.map((elem, index) => (
-              <AskReply key={index} data={elem} />
+              <AskReply key={index} data={elem} keyword={faqAsk} />
             ))
           }
           {

@@ -4,12 +4,12 @@ import CardPartner from './CardPartner';
 import { homeContentAPI } from '../services/request';
 
 function Footer() {
-  const [dataLoa, setDataLoa] = useState([]);
+  const [partnersData, setPartnersData] = useState([]);
 
   useEffect(() => {
     async function fetchPartnerContent() {
       const { partners } = await homeContentAPI()
-      setDataLoa(partners);
+      setPartnersData(partners);
     }
 
     return fetchPartnerContent();
@@ -17,26 +17,40 @@ function Footer() {
 
   return (
     <>
-      <div className='home-partners'>
-        <h2>Parcerias</h2>
-        {
-          dataLoa && dataLoa.map((partner) => <CardPartner partner={partner} />)
-        }
-        <a href='/contato' className='contact-link-btn'>Quero fazer parceria!</a>
-      </div>
+
       <footer className='fade-in'>
-        <img src={logo} className='' alt='LOAClima Logo'></img>
-        <aside>
-          <a href="https://dados.ameciclo.org/" target='_blank' rel="noreferrer">Dados da Ameciclo</a>
-          <a href="https://dados.ameciclo.org/observatorio" target='_blank' rel="noreferrer">Observatório Cicloviário</a>
-          <a href="https://www.ameciclo.org" target='_blank' rel="noreferrer">Site da Ameciclo</a>
-        </aside>
-        <aside>
-          <a href="/observatorio">Observatório</a>
-          <a href="/contato">Contato</a>
-          <a href="/faq">FAQ</a>
-          <a href="/noticias">Notícias</a>
-        </aside>
+        <div className='footer-partners'>
+          <h2>Patrocinadores</h2>
+          <div className='partner-card-container'>
+            {
+              partnersData && partnersData.map((partner) => partner.sponsor && <CardPartner partner={partner} />)
+            }
+          </div>
+          <a href='/contato' className='contact-link-btn'>Quero patrocinar!</a>
+        </div>
+        <div className='footer-partners'>
+          <h2>Parceiros</h2>
+          <div className='partner-card-container'>
+            {
+              partnersData && partnersData.map((partner) => !partner.sponsor && <CardPartner partner={partner} />)
+            }
+          </div>
+          <a href='/contato' className='contact-link-btn'>Quero ser parceiro!</a>
+        </div>
+        <div className='footer-links'>
+          <img src={logo} className='' alt='LOAClima Logo'></img>
+          <aside>
+            <a href="https://dados.ameciclo.org/" target='_blank' rel="noreferrer">Dados da Ameciclo</a>
+            <a href="https://dados.ameciclo.org/observatorio" target='_blank' rel="noreferrer">Observatório Cicloviário</a>
+            <a href="https://www.ameciclo.org" target='_blank' rel="noreferrer">Site da Ameciclo</a>
+          </aside>
+          <aside>
+            <a href="/observatorio">Observatório</a>
+            <a href="/contato">Contato</a>
+            <a href="/faq">FAQ</a>
+            <a href="/noticias">Notícias</a>
+          </aside>
+        </div>
       </footer>
     </>
   );
