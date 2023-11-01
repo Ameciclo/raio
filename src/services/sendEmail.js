@@ -58,7 +58,6 @@ const sendEmail = (event, body, func) => {
 
   mg.messages().send(data, (error) => {
     if (error) {
-      console.log(error)
       func.setError('Estamos com algum tipo de problema no servidor, tente novamente!')
       return;
     } else {

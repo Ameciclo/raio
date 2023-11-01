@@ -14,12 +14,13 @@ async function homeContentAPI() {
 
 async function newsApi() {
   try {
-    const response = await axios.get('https://test.cms.ameciclo.org/api/posts?populate=*');
+    let response = await axios.get('https://test.cms.ameciclo.org/api/posts?populate=*');
+    while (response.status === 403) {
+      response = await axios.get('https://test.cms.ameciclo.org/api/posts?populate=*')
+    }
     const { data } = response.data;
     return data;
   } catch (error) {
-    console.log('Dados 2020 Rodando em modo estático!')
-    window.location.reload()
     return [];
   }
 };
