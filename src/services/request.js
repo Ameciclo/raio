@@ -51,6 +51,17 @@ async function faqApi() {
   }
 };
 
+async function getProposalsData() {
+  try {
+    const response = await axios.get('https://test.cms.ameciclo.org/api/proposals');
+    const { data } = response.data;
+    
+    return data;
+  } catch (error) {
+    throw new Error(error)
+  }
+};
+
 async function getActionsData2020() {
   try {
     const response = await axios.get('https://loaclima.ameciclo.org:8010/proxy/dataset/38401a88-5a99-4b21-99d2-2d4a36a241f1/resource/5e5e1107-e1ed-4c2c-b258-e19a013f6caa/download/acoes_e_programas_json_2020_20201231.json');
@@ -120,4 +131,5 @@ export {
   getActionsData2021,
   getActionsData2022,
   getActionsData2023,
+  getProposalsData,
 };

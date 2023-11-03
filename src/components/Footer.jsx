@@ -17,7 +17,6 @@ function Footer() {
 
   return (
     <>
-
       <footer className='fade-in'>
         <div className='footer-partners'>
           <h2>Patrocinadores</h2>

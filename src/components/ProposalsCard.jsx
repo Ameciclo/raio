@@ -6,7 +6,7 @@ function ProposalsCard(props) {
     <a href={`/propostas/${proposal.id}`} >
       <div className="card-proposals">
         <div className="proposals-card">
-          <h2>{proposal.title}</h2>
+          <h2>{proposal.attributes.title}</h2>
         </div>
       </div>
     </a>
