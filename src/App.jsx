@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={ <Home /> } />
         <Route path="/contato" element={ <Contact /> } />
+        <Route path="/faq/:keyword" element={ <Faq /> } />
         <Route path="/faq" element={ <Faq /> } />
         <Route path="/noticias/:id" element={ <SingleNews /> } />
         <Route path="/noticias" element={ <News /> } />

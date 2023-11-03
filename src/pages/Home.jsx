@@ -29,8 +29,10 @@ function Home() {
 
   useEffect(() => {
     async function fetchNews() {
-      const data = await newsApi()
-      setDataNews(data.slice().sort((a, b) => b.id - a.id))
+      while (!dataNews.length) {
+        const data = await newsApi()
+        setDataNews(data.slice().sort((a, b) => b.id - a.id))
+      }
     }
 
     return fetchNews();
@@ -90,13 +92,13 @@ function Home() {
       <div className='home-faq'>
         <h2>Dúvidas Frequentes</h2>
         <div className='card-container'>
-          <a className='faq-card' href='/faq'>
+          <a className='faq-card' href='/faq/loa'>
             <h3>O que é LOA?</h3>
           </a>
-          <a className='faq-card' href='/faq'>
+          <a className='faq-card' href='/faq/ppa'>
             <h3>O que é PPA?</h3>
           </a>
-          <a className='faq-card' href='/faq'>
+          <a className='faq-card' href='/faq/ldo'>
             <h3>O que é LDO?</h3>
           </a>
         </div>

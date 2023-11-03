@@ -169,7 +169,7 @@ a {
 }
 
 .navbar a:hover {
-  border-bottom: 2px solid rgba(255, 255, 0, 0.247);
+  border-bottom: 1px solid white;
 }
 
 .hamburger {
@@ -251,7 +251,7 @@ a {
 .nav-active {
   display: flex;
   padding: 5px;
-  border-bottom: 0.5px solid rgb(0, 247, 255);
+  border-bottom: 3px solid rgb(0, 247, 255);
 }
 
 .show-sidebar {
@@ -457,14 +457,6 @@ a {
   box-shadow: 0 0 20px #1d9371;
 }
 
-.card-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 20px;
-}
-
 .home-faq {
   width: 100vw;
   display: flex;
@@ -478,6 +470,7 @@ a {
   color: #1d9371;
   background-color: white;
   text-align: center;
+  padding-bottom: 100px;
 }
 
 .faq-card {
@@ -496,81 +489,75 @@ a {
 }
 
 .faq-card:hover {
-  background-color: red;
+  background-color: #c02802;
 }
 
 .contact-link-btn {
   width: auto;
-  padding: 13px;
-  background-color: #1d9371;
+  padding: 10px;
+  background-color: #c02802fe;
   font-family: 'Montserrat', sans-serif;
   font-size: medium;
   color: white;
-  border: 1px solid #1d9371;
-  border-radius: 7px;
+  border-radius: 20px;
+  margin-top: 20px;
 }
 
 .contact-link-btn:hover {
-  background-color: rgba(1, 88, 88, 0.548);
+  background-color: #c02802;
   cursor: pointer;
 }
 
-.home-partners {
-  width: 100vw;
+.partner-card-container {
   display: flex;
-  padding: 20px;
-  padding-bottom: 77px;
-  padding-top: 77px;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  font-family: 'Ubuntu', sans-serif;
-  background-color: #003636;
-  font-size: 30px;
-  color: #fbfbfbd4;
-}
-
-.parners-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-  margin-top: 10px;
 }
 
 .partner-card {
-  width: 100%;
-  height: 150px;
+  width: 200px;
   display: flex;
+  padding: 10px;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: medium;
-  background-color: rgba(0, 51, 51, 0.548);
-  border-radius: 100px;
+  font-size: small;
   margin: 10px;
-  color: white;
 }
 
 .partner-card p {
-  width: 100%;
+  text-align: center;
+  text-size-adjust: inherit;
+  padding-top: 10px;
+  max-width: 150px;
+}
+
+.partner-card a {
+  display: flex;
+  width: 100px;
+  height: 100px;
 }
 
 .partner-card img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
+  width: 100px;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 footer {
   width: 100vw;
-  height: 200px;
+  height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-color: rgb(0, 47, 55);
+  align-items: center;
+  background-color: white;
+  color: rgb(255, 254, 254);
+  box-shadow: 0px 0px 100px #1d937153;
+  padding-top: 30px;
 }
 
 footer aside {
@@ -578,12 +565,37 @@ footer aside {
   display: flex;
   flex-direction: column;
   padding: 30px;
-  border-left: 1px solid rgba(205, 251, 3, 0.317);
+  border-left: 1px solid #1d9371;
   font-family: 'Montserrat', sans-serif;
+}
+
+footer img {
+  width: auto;
+  height: 200px;
 }
 
 aside a {
   margin-bottom: 7px;
+}
+
+.footer-partners {
+  width: 77vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.167);
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  color: #1d9371;
+}
+
+.footer-links {
+  background-color: #172f36;
+  width: 100vw;
+  display: flex;
 }
 
 .home-cover-logo {
@@ -801,12 +813,17 @@ aside a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .home-last-news h1 {
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
+}
+
+.home-last-news a {
+  width: 100%;
 }
 
 .contact-icon {
@@ -1084,7 +1101,8 @@ textarea {
 }
 
 .message-form label {
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 form input:focus,
@@ -1231,6 +1249,18 @@ div.contact-group-activity {
   font-family: Montserrat;
 }
 
+.faq-main mark {
+  color: black;
+  background-color: #e6ff01fe;
+  font-weight: 300px;
+}
+
+.faq-main  h1 mark {
+  color: rgb(63, 98, 70);
+  background-color: #e6ff01fe;
+  font-weight: 300px;
+}
+
 .faq-main span {
   font-size: 14px;
 
@@ -1248,6 +1278,14 @@ div.contact-group-activity {
 .faq-image {
   width: auto;
   height: 50vh;
+}
+
+.card-container {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
 
 .faq-search {
@@ -1549,6 +1587,11 @@ label {
   margin-right: 30px;
 }
 
+.news-pg #news-text-img {
+  width: 30vw;
+  margin-right: 30px;
+}
+
 .news-pg span {
   font-size: medium;
 }
@@ -1675,8 +1718,10 @@ label {
   color: red;
 }
 
-.carbon-value {
+.carbon-value div h1 {
+  width: 100%;
   color: grey;
+  font-size: 30px;
 }
 
 .carousel-container {
@@ -1780,10 +1825,9 @@ label {
   padding: 20px;
 }
 
-@media (max-width: 500px) {
-  .parners-container {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 1000px) {
+  .carbon-value div h1 {
+    font-size: 22px;
   }
 
   .home-title {
@@ -1830,8 +1874,8 @@ label {
   }
 
   .single-proposal-banner h1 {
-    margin-top: 20px;
-    font-size: 7vw;
+    margin: 20px 10px 20px 10px;
+    font-size: large;
   }
 
   .single-proposal-banner p {
@@ -2201,22 +2245,16 @@ label {
   }
 
   div.contact-group-activity {
+    height: 40px;
     display: flex;
-    margin: 20px;
-    padding: 10px;
-    background-color: rgba(0, 136, 136, 0.349);
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0 10px 0;
   }
 
-  .message-form .contact-group-activity input {
-    height: 30px;
-    background: #ffffff;
-  }
-
-  .contact-group-activity label {
-    margin-left: 0px;
-    margin-top: 0;
-    font-size: 20px;
-    text-align: center;
+  div.contact-group-activity input {
+    width: 40px;
+    height: 40px;
   }
 
   .message-form div.accept-box {
@@ -2264,20 +2302,18 @@ label {
 
   .message-form div {
     display: flex;
-    flex-direction: column;
   }
 
   .message-form input {
-    width: 100%;
     height: 50px;
+    width: auto;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     border: none;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-top: 5px;
     padding-left: 10px;
-    box-shadow: 0 0 5px black;
   }
 
   form input:focus,
@@ -2373,10 +2409,6 @@ label {
     color: #000;
   }
 
-  .faq-image {
-    width: 100vw;
-  }
-
   .observatory-banner {
     height: 150px;
     background-position: 0;
@@ -2461,7 +2493,7 @@ label {
   }
 
   footer {
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: auto;
   }
 
@@ -2471,60 +2503,18 @@ label {
 
   footer aside {
     width: 100vw;
-    font-size: 20px;
+    font-size: 15px;
     border-left: none;
     border-right: none;
   }
-}
 
-@media (min-width: 500px) and (max-width: 1000px) {
-  .navbar {
-    display: none;
+  .footer-links {
+    flex-direction: column-reverse;
   }
 
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    height: 40px;
-    margin-bottom: 7px;
-    background-color: #00000000;
-    border: none;
+  aside a {
+    margin-top: 7px;
   }
-
-  .hamburger div {
-    position: relative;
-    width: 30px;
-    height: 10px;
-    border-radius: 0px;
-    background-color: #ffffff84;
-    margin-top: 8px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .notfound-container {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-  .text-404 {
-    margin-top: 10px;
-  }
-
-  .contact-container-bg {
-    top: 150px;
-    height: 1000px;
-  }
-
-  .contact-content {
-    top: 155px;
-  }
-
-  .contact-button {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-
 }
 
 @media (min-width: 1500px) {

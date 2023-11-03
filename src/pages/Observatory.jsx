@@ -807,24 +807,6 @@ function Observatory() {
   const [totalValueExecuted2020, setTotalValueExecuted2020] = useState(79110000.53)
   const [totalValueEmissions, setTotalValueEmissions] = useState(3045.97)
 
-  // useEffect(() => {
-  //   console.log('Cards GoodActions', totalGoodActions2023.slice(0, 35))
-  //   console.log('Cards BadActions', totalBadActions2023.slice(0, 35))
-  //   console.log('Valor total orcado 2023', totalValueActions2023) // 52195938993.61
-  //   console.log('Valor total orcado 2022', totalValueActions2022) // 53602660064.86
-  //   console.log('Valor total orcado 2021', totalValueActions2021) // 46936310274.24
-  //   console.log('Valor total orcado 2020', totalValueActions2020) // 42260394375.91
-  //   console.log('Valor orcado (acoes colaboradoras) 2023', totalValueBudgeted2023) // 469843274.04
-  //   console.log('Valor orcado (acoes colaboradoras) 2022', totalValueBudgeted2022) // 511455340.08
-  //   console.log('Valor orcado (acoes colaboradoras) 2021', totalValueBudgeted2021) // 277121706.46
-  //   console.log('Valor orcado (acoes colaboradoras) 2020', totalValueBudgeted2020) // 274171854.19
-  //   console.log('Valor executado (acoes colaboradoras) 2023', totalValueExecuted2023) // 178252296.04
-  //   console.log('Valor executado (acoes colaboradoras) 2022', totalValueExecuted2022) // 377751117.86
-  //   console.log('Valor executado (acoes colaboradoras) 2021', totalValueExecuted2021) // 119026684.75
-  //   console.log('Valor executado (acoes colaboradoras) 2020', totalValueExecuted2020) // 79110000.53
-  //   console.log('Valor total por emissao de co2', totalValueEmissions) // 3045.97
-  // }, [/* colocar dependencias */])
-
   const numParse = (numero) => numero.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
 
   useEffect(() => {

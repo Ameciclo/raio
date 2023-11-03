@@ -12,8 +12,8 @@ function SideNavBar() {
       </div>
       <nav className={`navbar-list ${!navBarListOn && 'show-sidebar'}`} onClick={() => setNavBarListOn(false)}>
         <a href='/' onClick={() => setNavBarListOn(false)}>INÍCIO</a>
-        <a href='/propostas' onClick={() => setNavBarListOn(false)}>PROPOSTAS</a>
         <a href='/observatorio' onClick={() => setNavBarListOn(false)}>OBSERVATÓRIO</a>
+        <a href='/propostas' onClick={() => setNavBarListOn(false)}>PROPOSTAS</a>
         <a href='/noticias' onClick={() => setNavBarListOn(false)}>NOTÍCIAS</a>
         <a href='/contato' onClick={() => setNavBarListOn(false)}>CONTATO</a>
         <a href='/faq' onClick={() => setNavBarListOn(false)}>FAQ</a>
