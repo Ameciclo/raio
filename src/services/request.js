@@ -27,11 +27,13 @@ async function newsApi() {
 
 async function singleNewsApi(id) {
   try {
-    const response = await axios.get(`https://test.cms.ameciclo.org/api/posts/${id}?populate=*`);
-    const { data } = response.data;
+    let response = await axios.get(`https://test.cms.ameciclo.org/api/posts/${id}?populate=*`);
+    while (response.status === 403) {
+      response = await axios.get(`https://test.cms.ameciclo.org/api/posts/${id}?populate=*`)
+    }
+    const data = response.data.data;
     return data;
   } catch (error) {
-    window.location.reload()
     return [];
   }
 };

@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { singleNewsApi } from '../services/request';
 
 function SingleNews() {
-  const [dataNews, setDataNews] = useState([]);
+  const [dataNews, setDataNews] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
@@ -18,12 +18,13 @@ function SingleNews() {
     return fetchSingleNewsData();
   }, [id]);
 
+  useEffect(() => console.log(dataNews),[dataNews])
   return (
     <>
       <Header page='noticias' />
       <SideNavBar />
       {
-        dataNews.img && (
+        dataNews && (
           <>
             <div className='news-pg fade-in'>
               <div className="single-news-banner">
@@ -33,10 +34,9 @@ function SingleNews() {
 
               <p className='news-text'>
                 <div>
-                  <img id='news-text-img' src={`https://test.cms.ameciclo.org${dataNews.img.data.attributes.formats.large.url}`} alt={dataNews.imgDescription} />
-                  <span>{dataNews.imgDescription}</span>
+                  <img id='news-text-img' src={dataNews.featuredImage.data.attributes.url} alt={dataNews.featuredImage.data.attributes.alternativeText} />
                 </div>
-                {dataNews.text}
+                {dataNews.body}
               </p>
             </div>
             < Footer />

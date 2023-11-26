@@ -18,6 +18,8 @@ function News() {
     return fetchData();
   }, []);
 
+  useEffect(() => console.log(dataNews),[dataNews])
+
   return (
     <>
       <Header page='noticias' />

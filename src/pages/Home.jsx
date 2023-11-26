@@ -7,6 +7,7 @@ import simpleLogo from '../images/LOGO-LOACLIMA-SIMBOLO-fundo-transparente.png';
 import Footer from '../components/Footer';
 import { homeContentAPI, newsApi } from '../services/request';
 import NewsCard from '../components/NewsCard';
+import NewsCardMaintenance from '../components/NewsCardMaintenance';
 
 function Home() {
   const [dataLoa, setDataLoa] = useState({});
@@ -73,7 +74,7 @@ function Home() {
       <div className="home-last-news">
         <h1>Últimas Notícias</h1>
         {
-          dataNews.map(
+          dataNews.slice(0, 3).map(
             (singleNews) => <NewsCard data={singleNews} />
           )
         }
