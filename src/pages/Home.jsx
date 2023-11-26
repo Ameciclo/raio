@@ -73,12 +73,11 @@ function Home() {
       </div>
       <div className="home-last-news">
         <h1>Últimas Notícias</h1>
-        {/* {
-          dataNews.map(
+        {
+          dataNews.slice(0, 3).map(
             (singleNews) => <NewsCard data={singleNews} />
           )
-        } */}
-        <NewsCardMaintenance />
+        }
         <a href='/noticias' className=''>Todas as notícias</a>
       </div>
       <div className='home-faq'>

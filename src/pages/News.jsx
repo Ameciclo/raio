@@ -4,7 +4,6 @@ import SideNavBar from '../components/SideNavBar';
 import NewsCard from '../components/NewsCard';
 import Footer from '../components/Footer';
 import { newsApi } from '../services/request';
-import NewsCardMaintenance from '../components/NewsCardMaintenance';
 
 
 function News() {
@@ -19,6 +18,8 @@ function News() {
     return fetchData();
   }, []);
 
+  useEffect(() => console.log(dataNews),[dataNews])
+
   return (
     <>
       <Header page='noticias' />
@@ -28,12 +29,11 @@ function News() {
           <h1>NOTÍCIAS</h1>
         </div>
         <div className='news-area'>
-          {/* {
+          {
             dataNews.map(
               (singleNews) => <NewsCard data={singleNews} />
             )
-          } */}
-        <NewsCardMaintenance />
+          }
         </div>
       </div>
       <Footer />

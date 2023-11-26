@@ -1,18 +1,19 @@
 import React from 'react';
 
 function NewsCard(props) {
-  const news = props.data
-  const date = new Date();
+  const newsdata = props.data
+  const newsImageData = newsdata.attributes.featuredImage.data.attributes
+  const newsDate = new Date(newsdata.attributes.createdAt)
   return (
-    <a href={`/noticias/${news.id}`} className='news-card'>
-      <img src={`${news.attributes.url}`} alt={news.attributes.imgDescription} />
+    <a href={`/noticias/${newsdata.id}`} className='news-card'>
+      <img src={newsImageData.url} alt={newsImageData.alternativeText} />
       <div className='news-card-text'>
         <div className='news-card-text-gradient'></div>
-        <span>{date.getDate()}/{date.getMonth()}/{date.getFullYear()}</span>
+        <span>{newsDate.getDate()}/{newsDate.getMonth()+1}/{newsDate.getFullYear()}</span>
         <div className='news-card-title'>
-          <h1>Manutenção....</h1>
+          <h1>{newsdata.attributes.title}</h1>
         </div>
-        <p>O serviço de notícias LOAClima está temporariamente em manutenção... Voltaremos em logo breve!</p>
+        <p>{newsdata.attributes.body}</p>
       </div>
     </a>
   );
