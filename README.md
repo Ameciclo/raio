@@ -49,7 +49,7 @@ O projeto utiliza o backend do [repositório quadro](https://github.com/Ameciclo
   🔹 StrapiV4 - [test.cms.ameciclo.org/api/proposals](http://test.cms.ameciclo.org/api/proposals)
 - **Notícias**:
 
-  🔹 StrapiV4 - [test.cms.ameciclo.org/api/post](http://test.cms.ameciclo.org/api/post)
+  🔹 StrapiV4 - [test.cms.ameciclo.org/api/posts](http://test.cms.ameciclo.org/api/posts)
 - **Observatório**:
   - **Dados do observatório**:
   
