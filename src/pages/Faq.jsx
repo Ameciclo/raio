@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../components/Header';
-import SideNavBar from '../components/SideNavBar';
-import video from '../video/faq-bg.mp4';
-import image from '../images/faq.png';
 import AskReply from '../components/AskReply';
 import FaqForm from '../components/FaqForm';
-import Footer from '../components/Footer';
 import { faqApi } from '../services/request';
 import { useParams } from 'react-router-dom';
 
 function Faq() {
   const [faqAsk, setFaqAsk] = useState('');
   const [dataFaqs, setDataFaqs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const { keyword } = useParams();
-  console.log(keyword)
   useEffect(() => {
     async function fetchData() {
       const data = await faqApi();
@@ -26,7 +22,8 @@ function Faq() {
       );
     }
     keyword && setFaqAsk(keyword)
-
+    setLoading(false)
+    
     return fetchData();
   }, [keyword]);
 
@@ -36,33 +33,24 @@ function Faq() {
   );
 
   return (
-    <>
-      <video autoPlay muted loop>
-        <source src={video} type="video/mp4" />
-        Seu navegador não suporta a reprodução de vídeo.
-      </video>
-      <Header page='faq' />
-      <SideNavBar />
-
-      <div className='faq-main fade-in'>
-        <div className='faq-image-container'>
-          <img className='faq-image' src={image} alt="capa da pagina" />
-        </div>
-        <div className='faq-search'>
-          <label htmlFor="faqAsk">O que você está procurando?</label>
-          <input
-            type="text"
-            id="faqAsk"
-            name="faqAsk"
-            placeholder="Palavra chave"
-            autoComplete="off"
-            value={faqAsk}
-            onChange={(e) => {
-              setFaqAsk(e.target.value)
-            }}
-            required
-          />
-        </div>
+    <div className='faq-main fade-in'>
+      {loading && <h1>Carregando...</h1>}
+      {!loading && (<><div className='faq-search'>
+        <br />
+        <label htmlFor="faqAsk">O que você está procurando?</label>
+        <input
+          type="text"
+          id="faqAsk"
+          name="faqAsk"
+          placeholder="Palavra chave"
+          autoComplete="off"
+          value={faqAsk}
+          onChange={(e) => {
+            setFaqAsk(e.target.value)
+          }}
+          required
+        />
+      </div>
         <div className='ask-container'>
           {
 
@@ -79,10 +67,8 @@ function Faq() {
               </div>
             )
           }
-        </div>
-      </div>
-      <Footer />
-    </>
+        </div></>)}
+    </div>
   );
 }
 

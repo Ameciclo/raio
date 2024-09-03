@@ -94,7 +94,7 @@ const FaqForm = () => {
             <div className='message-form-sucess'>
               <img className='sucess-icon' src={sucessIcon} alt="icone de simbolo check simbolizando que o email foi recebido" />
               <h2>Entregue!</h2>
-              <p>Nós do LOAClima estamos muito felizes com sua contribuição!</p>
+              <p>Estamos muito felizes com sua contribuição!</p>
             </div>
           </>
         ) : (

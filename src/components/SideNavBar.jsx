@@ -1,24 +1,23 @@
-import React, { useContext } from 'react';
-import AppContext from '../context/AppContext';
-import arrow from '../images/double-arrow.png'
+import React, {  useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
-function SideNavBar() {
-  const { navBarListOn, setNavBarListOn } = useContext(AppContext);
+function SideNavBar(props) {
+  const location = useLocation();
+  const [ navBarListOn, setNavBarListOn ] = useState();
+
+  const isLocalPageNavButton = (page_name) => {
+    if (page_name === location.pathname) return "nav-active"
+  }
 
   return (
-    <>
-      <div onClick={() => setNavBarListOn(false)} className={`slide-out-btn fade-in ${!navBarListOn && 'slide-out-btn-off'}`} >
-        <img id='arrow-side-bar-btn' src={arrow} alt="seta para minimizar side bar" />
-      </div>
-      <nav className={`navbar-list ${!navBarListOn && 'show-sidebar'}`} onClick={() => setNavBarListOn(false)}>
-        <a href='/' onClick={() => setNavBarListOn(false)}>INÍCIO</a>
-        <a href='/observatorio' onClick={() => setNavBarListOn(false)}>OBSERVATÓRIO</a>
-        <a href='/propostas' onClick={() => setNavBarListOn(false)}>PROPOSTAS</a>
-        <a href='/noticias' onClick={() => setNavBarListOn(false)}>NOTÍCIAS</a>
-        <a href='/contato' onClick={() => setNavBarListOn(false)}>CONTATO</a>
-        <a href='/faq' onClick={() => setNavBarListOn(false)}>FAQ</a>
-      </nav>
-    </>
+    <div onClick={() => setNavBarListOn(false)} className={navBarListOn ? "navbar-list-on" : "navbar-list-off"}>
+      <a href='/' className={isLocalPageNavButton("/")} >INÍCIO</a>
+      <a href='/observatorio' className={isLocalPageNavButton("/observatorio")} >OBSERVATÓRIO</a>
+      <a href='/propostas' className={isLocalPageNavButton("/propostas")} >PROPOSTAS</a>
+      <a href='/noticias' className={isLocalPageNavButton("/noticias")} >NOTÍCIAS</a>
+      <a href='/contato' className={isLocalPageNavButton("/contato")} >CONTATO</a>
+      <a href='/faq' className={isLocalPageNavButton("/faq")} >FAQ</a>
+    </div>
   );
 }
 
