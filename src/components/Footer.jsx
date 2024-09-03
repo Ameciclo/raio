@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../images/logo1.png'
+import logo from '../images/header-logo.png'
 import CardPartner from './CardPartner';
 import { homeContentAPI } from '../services/request';
 
-function Footer() {
+function Footer(props) {
   const [partnersData, setPartnersData] = useState([]);
 
   useEffect(() => {
@@ -17,10 +17,9 @@ function Footer() {
 
   return (
     <>
-
       <footer className='fade-in'>
         <div className='footer-partners'>
-          <h2>Patrocinadores</h2>
+          <h2 key={props.id}>Apoio</h2>
           <div className='partner-card-container'>
             {
               partnersData && partnersData.map((partner) => partner.sponsor && <CardPartner partner={partner} />)
@@ -28,17 +27,8 @@ function Footer() {
           </div>
           <a href='/contato' className='contact-link-btn'>Quero patrocinar!</a>
         </div>
-        <div className='footer-partners'>
-          <h2>Parceiros</h2>
-          <div className='partner-card-container'>
-            {
-              partnersData && partnersData.map((partner) => !partner.sponsor && <CardPartner partner={partner} />)
-            }
-          </div>
-          <a href='/contato' className='contact-link-btn'>Quero ser parceiro!</a>
-        </div>
         <div className='footer-links'>
-          <img src={logo} className='' alt='LOAClima Logo'></img>
+          <img src={logo} className='' alt='DOM Logo'></img>
           <aside>
             <a href="https://dados.ameciclo.org/" target='_blank' rel="noreferrer">Dados da Ameciclo</a>
             <a href="https://dados.ameciclo.org/observatorio" target='_blank' rel="noreferrer">Observatório Cicloviário</a>

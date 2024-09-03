@@ -1,5 +1,5 @@
 import mailgun from 'mailgun-js';
-
+import "dotenv"
 const sendEmail = (event, body, func) => {
   event.preventDefault()
   
@@ -46,7 +46,7 @@ const sendEmail = (event, body, func) => {
     return "nao possui"
   }
   const data = {
-    from: `LOA Clima <loaclima@ameciclo.org>`,
+    from: `LOA Clima <dom@ameciclo.org>`,
     to: 'contato@ameciclo.org',
     subject: 'Contato do site',
     text: `Nome: ${body.name} \n Email: ${body.email} \n Telefone: ${body.phone} \n Local: ${body.local} \n Grupo: \n ${groupParseData()} \n Mensagem: ${body.message}`

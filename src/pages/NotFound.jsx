@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import SideNavBar from '../components/SideNavBar';
-import video from '../video/home-bg.mp4'
 import gif404 from '../images/404.gif'
 import Footer from '../components/Footer';
 
@@ -21,10 +20,6 @@ function NotFoundPage() {
 
   return (
     <>
-      <video autoPlay muted loop className='video-404'>
-        <source src={video} type="video/mp4" />
-        Seu navegador não suporta a reprodução de vídeo.
-      </video>
       {
         backgroundLoaded && (
           <>

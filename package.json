@@ -1,11 +1,8 @@
 {
-  "name": "loaclima",
+  "name": "dom.ameciclo.org",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "5.15.0",
-    "@testing-library/react": "11.2.7",
-    "@testing-library/user-event": "12.8.3",
     "axios": "^0.24.0",
     "eslint-config-trybe-frontend": "1.2.1",
     "mailgun-js": "^0.22.0",
@@ -18,11 +15,11 @@
     "web-vitals": "1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start & npm run proxy",
+    "start": "react-scripts start",
+    "dev": "nodemon -exec npm start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "proxy": "lcp --proxyUrl https://dados.pe.gov.br"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -42,10 +39,9 @@
       "last 1 safari version"
     ]
   },
-  "author": "@italosergio",
+  "author": "Ítalo ",
   "devDependencies": {
     "eslint-plugin-sonarjs": "0.10.0",
-    "jest": "26.6.0",
     "stylelint": "13.8.0",
     "stylelint-order": "4.1.0"
   }

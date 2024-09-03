@@ -1,11 +1,11 @@
-# LOAClima
-[loaclima.ameciclo.org](https://loaclima.ameciclo.org/)
+# Bem vinda(o) ao DOM (Diagnóstico Orçamentário Municipal)
+[dom.ameciclo.org](https://dom.ameciclo.org/)
 
-O LOA Clima é um projeto de Incidência Política nas Leis Orçamentárias do Governo do Estado de Pernambuco.
+O DOM é um projeto de Incidência Política nas Leis Orçamentárias do Governo do Estado de Pernambuco, epsecificamente na esfera Municipal de Recife.
 
 ## Visão Geral
 
-O projeto abarca a análise da aplicação de recursos do último Plano Plurianual do Governo do Estado de Pernambuco, bem como a proposição de um arcabouço orçamentário que promova justiça climática. Serão realizadas atividades de formação e alinhamento de propostas com a sociedade civil organizada, de articulação com secretarias estaduais para proposição de itens orçamentários e de articulação com a Assembleia Legislativa Estadual para a proposição de emendas.
+O projeto abarca a análise da aplicação de recursos do último Plano Plurianual do Governo do Estado de Pernambuco, bem como a proposição de um arcabouço orçamentário que promova justiça sustentável. Serão realizadas atividades de formação e alinhamento de propostas com a sociedade civil organizada, de articulação com secretarias estaduais para proposição de itens orçamentários e de articulação com a Assembleia Legislativa Estadual para a proposição de emendas.
 
 ## Instalação
 ⚠️ O projeto utiliza Node.js versão 16.
@@ -22,61 +22,39 @@ git clone https://github.com/Ameciclo/raio.git
 cd raio
 ```
 
-3. Instale as dependências do projeto:
+3. Selecione a branch correta:
+
+```bash
+git checkout dom
+```
+
+4. Instale as dependências do projeto:
 
 ```bash
 npm install
 ```
 
-4. inicie o projeto localmente:
+5. inicie o projeto localmente:
 
 ```bash
-npm start
+npm run dev
 ```
 
 ## Backend do Projeto
-O projeto utiliza o backend do [repositório quadro](https://github.com/Ameciclo/quadro). Abaixo estão listados os endpoints correspondentes:
+O backend deste projeto ainda está em construção...
 
-<sub>🔸pré-existente 🔹criado neste projeto </sub>
-
-- **Página inicial**:
-
-  🔸 StrapiV3 - [cms.ameciclo.org/api/projects?name=LOAClima](http://cms.ameciclo.org/api/projects?name=LOAClima)
-- **Parceiros**:
-
-  🔸 StrapiV3 - [cms.ameciclo.org/api/projects?name=LOAClima](http://cms.ameciclo.org/api/projects?name=LOAClima)
-- **Propostas**: 
-
-  🔹 StrapiV4 - [test.cms.ameciclo.org/api/proposals](http://test.cms.ameciclo.org/api/proposals)
-- **Notícias**:
-
-  🔹 StrapiV4 - [test.cms.ameciclo.org/api/posts](http://test.cms.ameciclo.org/api/posts)
-- **Observatório**:
-  - **Dados do observatório**:
-  
-    🔹 StrapiV4 - [test.cms.ameciclo.org/api/loaclima/observatory](http://test.cms.ameciclo.org/api/loaclima/observatory)
-  - **API que fornece o código das ações e programas para a API de dados do observatório**:
-
-    🔹 StrapiV4 - [test.cms.ameciclo.org/api/loaclimaobservatoryupdatedatas](http://test.cms.ameciclo.org/api/loaclimaobservatoryupdatedatas)
-
-## Tecnologias
-- **React (17.0.2)**: Biblioteca JavaScript para criar interfaces de usuário.
-- **React DOM (17.0.2)**: Responsável pela manipulação do DOM em aplicativos React.
-- **React Router DOM (^6.11.2)**: Para roteamento e navegação em aplicativos React.
-- **React Scripts (4.0.3)**: Conjunto de scripts para criar, testar e executar aplicativos React.
-- **Axios (^0.24.0)**: Biblioteca para fazer requisições HTTP.
-- **Mailgun JS (^0.22.0)**: Biblioteca para interagir com o serviço de envio de e-mails do Mailgun.
-- **React Google Charts (^4.0.1)**: Para renderizar gráficos do Google Charts em aplicativos React.
-- **React Lazyload (^3.2.0)**: Usado para carregar imagens de forma preguiçosa (lazy loading).
-- **Testing Library Jest Dom (5.15.0)**: Utilizado para testar componentes React no ambiente de teste Jest.
-- **Testing Library React (11.2.7)**: Biblioteca de testes para facilitar a escrita de testes para componentes React.
-- **Testing Library User Event (12.8.3)**: Biblioteca para simular eventos de usuário em testes de componentes React.
-- **ESLint Config Trybe Frontend (1.2.1)**: Configuração de ESLint específica para projetos Trybe Frontend.
-- **Web Vitals (1.1.2)**: Biblioteca para medir métricas de desempenho na web.
-
-Dependências de desenvolvimento:
-
-- **ESLint Plugin SonarJS (0.10.0)**: Plugin ESLint para regras específicas do SonarJS.
-- **Jest (26.6.0)**: Framework de teste JavaScript.
-- **Stylelint (13.8.0)**: Linter para folhas de estilo (CSS, SCSS, etc.).
-- **Stylelint Order (4.1.0)**: Plugin Stylelint para ordenar propriedades CSS.
+### Tecnologias
+React (17.0.2): Biblioteca JavaScript para criar interfaces de usuário.
+React DOM (17.0.2): Responsável pela manipulação do DOM em aplicativos React.
+React Router DOM (^6.11.2): Para roteamento e navegação em aplicativos React.
+React Scripts (4.0.3): Conjunto de scripts para criar, testar e executar aplicativos React.
+Axios (^0.24.0): Biblioteca para fazer requisições HTTP.
+Mailgun JS (^0.22.0): Biblioteca para interagir com o serviço de envio de e-mails do Mailgun.
+React Google Charts (^4.0.1): Para renderizar gráficos do Google Charts em aplicativos React.
+React Lazyload (^3.2.0): Usado para carregar imagens de forma preguiçosa (lazy loading).
+Web Vitals (1.1.2): Biblioteca para medir a performance das páginas da web.
+### Dependências de Desenvolvimento
+ESLint Plugin SonarJS (0.10.0): Plugin ESLint para regras específicas do SonarJS.
+Stylelint (13.8.0): Linter para folhas de estilo (CSS, SCSS, etc.).
+Stylelint Order (4.1.0): Plugin Stylelint para ordenar propriedades CSS.
+ESLint Config Trybe Frontend (1.2.1): Configuração de regras ESLint para projetos frontend seguindo os padrões da Trybe.
