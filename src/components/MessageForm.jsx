@@ -96,8 +96,8 @@ const MessageForm = () => {
       ) : (
         <div className='contact-text'>
           <h1 className='contact-title'>Fale conosco!</h1>
-          <h3 className='contact-subtitle'><mark>Entre em contato</mark> e colabore com projeto LOAClima.</h3><br />
-          <h4 className='contact-subtitle'>Faça parte dessa causa importante e <mark>gere impacto</mark> positivo para a <mark>sustentabilidade</mark> em Pernambuco!</h4>
+          <h3 className='contact-subtitle'>Entre em contato e <mark>colabore</mark> com projeto LOAClima!</h3><br />
+          <h4 className='contact-subtitle'>Gere <mark>impacto</mark> positivo para a <mark>sustentabilidade</mark> em Pernambuco!</h4>
         </div>
       )}
       <div className="message-form-container">
@@ -125,6 +125,7 @@ const MessageForm = () => {
                   onChange={(e) => setName(e.target.value)}
                   required
                 />
+                <br />
                 <label htmlFor="email">Email</label>
                 <input
                   type="email"
@@ -136,6 +137,7 @@ const MessageForm = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
+                <br />
 
                 <label htmlFor="tel">Celular</label>
                 <input
@@ -148,6 +150,7 @@ const MessageForm = () => {
                   onChange={(e) => setTel(e.target.value)}
                   required
                 />
+                <br />
 
                 <label htmlFor="local">Endereço</label>
                 <input
@@ -160,6 +163,7 @@ const MessageForm = () => {
                   onChange={(e) => setLocal(e.target.value)}
                   required
                 />
+                <br />
 
                 <label>Participa de algum grupo que queria participar das ações?</label>
                 <div className="group-check">
@@ -302,6 +306,8 @@ const MessageForm = () => {
                 <p>
                   Seguindo a <mark>Lei Geral de Proteção de Dados - LGPD (Lei nº 13.709)</mark>, informamos que nenhum dado pessoal será divulgado ou fornecido a terceiros. Todas informações contidas nesse formulário serão exclusivamente para coletar informações de percepção da rede, além de fornecer retorno para aqueles que desejarem. Selecione abaixo <mark>“EU ACEITO”</mark> caso esteja de acordo com essas condições.
                 </p>
+                <br />
+
                 <div className='accept-box'>
                   <input
                     type="checkbox"
