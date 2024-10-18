@@ -20,7 +20,6 @@ function DevelopingPage() {
       {
         renderOthers && (
           <>
-            <SideNavBar />
             <div className="gif-dev-container fade-in">
               <img
                 src={gifDev}

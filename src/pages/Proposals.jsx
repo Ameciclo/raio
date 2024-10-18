@@ -13,7 +13,6 @@ function Proposals() {
   return (
     <>
       <Header page='propostas' />
-      <SideNavBar />
       <div class="page-banner proposals-banner">
         <h1>PROPOSTAS</h1>
       </div>

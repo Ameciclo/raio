@@ -7,7 +7,8 @@ import NewsCard from '../components/NewsCard';
 import Loading from '../components/Loading';
 
 function Home() {
-  const [loading, setLoading] = useState(true);
+  const [loadingDesc, setLoadingDesc] = useState(true);
+  const [loadingNews, setLoadingNews] = useState(true);
   const [dataLoa, setDataLoa] = useState({});
   const [dataNews, setDataNews] = useState([]);
 
@@ -16,7 +17,7 @@ function Home() {
     async function fetchHomeContent() {
       const dataLOAClima = await homeContentAPI()
       setDataLoa(dataLOAClima);
-      setLoading(false)
+      setLoadingDesc(false)
     }
 
     return fetchHomeContent();
@@ -24,10 +25,9 @@ function Home() {
 
   useEffect(() => {
     async function fetchNews() {
-      while (!dataNews.length) {
-        const data = await newsApi()
-        setDataNews(data.slice().sort((a, b) => b.id - a.id))
-      }
+      const data = await newsApi()
+      setDataNews(data.slice().sort((a, b) => b.id - a.id))
+      setLoadingNews(false)
     }
 
     return fetchNews();
@@ -36,12 +36,11 @@ function Home() {
   return (
     <>
       <Header page='home' />
-      <SideNavBar />
-      <div className='fade-in home-cover'/>
+      <div className='fade-in home-cover' />
       <div className='home-text-about effect'>
         <h1>O que é o LOAClima?</h1>
         <br /><br />
-        {loading ? <Loading /> : (<p>{dataLoa.description}</p>)}
+        {loadingDesc ? <Loading /> : (<p>{dataLoa.description}</p>)}
       </div>
       <div className="home-proposals">
         <h1>Nossas Propostas</h1>
@@ -59,9 +58,14 @@ function Home() {
         <h1>Últimas Notícias</h1>
         <br /><br />
         {
-          dataNews.slice(0, 3).map(
-            (singleNews) => <NewsCard data={singleNews} />
-          )
+          loadingNews ?
+            (<Loading />)
+            :
+            (
+              dataNews.slice(0, 3).map(
+                (singleNews) => <NewsCard data={singleNews} />
+              )
+            )
         }
         <a href='/noticias'>Todas as notícias</a>
       </div>

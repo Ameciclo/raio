@@ -21,7 +21,6 @@ function News() {
   return (
     <>
       <Header page='noticias' />
-      <SideNavBar />
       <div className='page'>
         <div className="page-banner news-banner">
           <h1>NOTÍCIAS</h1>

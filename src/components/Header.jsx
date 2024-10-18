@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
 import logo from '../images/LOGO-LOA-11-branco-2.png'
 import { Link } from 'react-router-dom';
+import SideNavBar from './SideNavBar';
 
 function Header(props) {
   const [headerBackground, setHeaderBackground] = useState('');
@@ -29,6 +30,7 @@ function Header(props) {
         </Link>
       </div>
       <NavBar page={props.page} />
+      <SideNavBar page={props.page}/>
     </header>
   );
 }

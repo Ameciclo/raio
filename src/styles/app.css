@@ -97,7 +97,7 @@ a {
   background-color: #008080;
 }
 
-.header-dev {
+.header-observatorio {
   background-color: #008080;
 }
 
@@ -190,25 +190,48 @@ a {
 }
 
 .navbar-list {
+  position: fixed;
+  width: 50vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #008080;
   display: flex;
   flex-direction: column;
-  position: fixed;
   align-items: center;
-  justify-content: space-between;
-  padding: 10% 0px 170% 0px;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: lighter;
-  font-size: medium;
-  top: 0;
-  height: 100%;
+  color: white;
+  font-size: large;
+  transform: translateX(50vw);
+}
+
+
+.navbar-list-out-section {
+  position: fixed;
   width: 50vw;
-  background-color: #1d9371bf;
-  color: rgb(127 245 243);
-  border: none;
-  backdrop-filter: blur(20px);
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(101%);
-  z-index: 9999;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.199);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100vw);
+  align-items: center;
+}
+
+.show-sidebar {
+  transform: translateX(0vw);
+}
+
+.show-sidebar-out {
+  transform: translateX(0vw);
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
 }
 
 .slide-out-btn {
@@ -237,10 +260,6 @@ a {
   height: 30px;
 }
 
-.navbar-list * {
-  background-color: transparent;
-}
-
 .navbar-list a {
   display: flex;
   padding-top: 25px;
@@ -257,10 +276,6 @@ a {
   display: flex;
   padding: 5px;
   border-bottom: 3px solid whitesmoke;
-}
-
-.show-sidebar {
-  transform: translateX(200%);
 }
 
 .home-cover {
@@ -765,13 +780,13 @@ aside a {
   height: 100%;
   font-family: 'ubuntu', sans-serif;
   color: #008080;
-  background: url("/src/images/banners/propostas.png") top / cover  no-repeat;
+  background: url("/src/images/banners/propostas.png") top / cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.home-proposals > a {
+.home-proposals>a {
   color: white;
   font-size: large;
   background-color: red;
@@ -1259,7 +1274,7 @@ div.contact-group-activity {
   font-weight: 300px;
 }
 
-.faq-main  h1 mark {
+.faq-main h1 mark {
   color: rgb(63, 98, 70);
   background-color: #e6ff01fe;
   font-weight: 300px;
@@ -1619,15 +1634,16 @@ label {
 .page-banner {
   height: 20vw;
   width: 100%;
+  background-color: #ccc;
   background-size: cover;
-  background-position: 0px -50px;
+  background-position: top;
+  background-repeat: no-repeat;
   margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #ccc;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.595);
   text-align: center;
 }
@@ -1653,8 +1669,6 @@ label {
 
 .news-banner {
   background-image: url('../images/banners/noticias.png');
-  background-repeat: no-repeat;
-  background-position: top;
 }
 
 .contact-banner {
@@ -1854,6 +1868,38 @@ label {
 }
 
 @media (max-width: 1000px) {
+
+  .news-text img {
+    margin-top: 40px;
+    max-width: 400px;
+  }
+
+  .partner-card {
+    justify-content: space-evenly;
+  }
+
+  .partner-card p {
+    font-size: medium;
+  }
+
+  .lgpdArea p {
+    padding: 20px 30px;
+  }
+  .page-banner {
+    height: 250px;
+  }
+
+  .news-banner h1 {
+    color: white;
+  }
+
+  .page-banner h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    text-shadow: 5px 5px #000000;
+    text-transform: uppercase;
+  }
+
   .carbon-value div h1 {
     font-size: 22px;
   }
@@ -1874,8 +1920,7 @@ label {
   .news-text p {
     display: flex;
     flex-direction: column;
-
-    font-size: 10px;
+    font-size: 23px;
   }
 
   .news-pg #news-text-img {
@@ -1951,41 +1996,19 @@ label {
     overflow: none;
     text-overflow: none;
     transition: width 0.2s, height 0.2s;
-
   }
 
   .news-card-text {
-    width: 80vw;
-    padding: 10px;
-  }
-
-  .news-banner {
-    height: 150px;
-  }
-
-  .news-banner h1 {
-    font-size: 50px;
-  }
-
-  .proposals-banner {
-    margin-top: 60px;
-    height: 150px;
-  }
-
-  .proposals-banner h1 {
-    font-size: 50px;
+    margin-top: 30px;
   }
 
   .news-card {
     flex-direction: column;
-    height: 280px;
   }
 
   .news-card img {
-    max-width: none;
-    min-width: none;
-    height: 50%;
-    width: 100%;
+    max-width: 100%;
+    min-width: auto;
     object-fit: cover;
   }
 
@@ -1998,6 +2021,7 @@ label {
     width: 100%;
     z-index: 9999;
     top: 0;
+    justify-content: space-between;
   }
 
   .header-home {
@@ -2035,7 +2059,7 @@ label {
     justify-content: center;
     align-items: center;
     padding-left: 0;
-    margin-top: 60px;
+    margin-top: 130px;
   }
 
   .home-cover-logo {
@@ -2079,10 +2103,6 @@ label {
   .home-last-news {
     padding: 50px 5vw;
     margin: 0;
-  }
-
-  .faq-card {
-    width: 90vw;
   }
 
   .card-container {
@@ -2225,12 +2245,10 @@ label {
   }
 
   .main-contact {
-    width: 50px;
     height: auto;
-    padding: 37px;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
-    padding-top: 85px;
     align-items: flex-start;
   }
 
@@ -2250,13 +2268,14 @@ label {
     font-size: 50px;
     margin-bottom: 10px;
     z-index: 9;
+    margin-bottom: 20px;
   }
 
   .contact-subtitle {
     font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
     width: 80vw;
-    font-size: 15px;
+    font-size: 20px;
     z-index: 99;
   }
 
@@ -2271,6 +2290,10 @@ label {
   div.contact-group-activity input {
     width: 40px;
     height: 40px;
+  }
+
+  .message-form {
+    margin-top: 30px;
   }
 
   .message-form div.accept-box {
@@ -2425,14 +2448,8 @@ label {
     color: #000;
   }
 
-  .observatory-banner {
-    height: 150px;
-    background-position: 0;
-  }
-
   .observatory-banner h1 {
-    text-shadow: 2px 5px black;
-    font-size: 35px;
+    font-size: 50px;
   }
 
   .observatory-area {
@@ -2511,15 +2528,17 @@ label {
   footer {
     flex-direction: column;
     height: auto;
+    width: 100vw;
+    
   }
 
   footer img {
-    width: 50%;
+    width: 300px;
   }
 
   footer aside {
     width: 100vw;
-    font-size: 15px;
+    font-size: 25px;
     border-left: none;
     border-right: none;
   }
@@ -2530,6 +2549,26 @@ label {
 
   aside a {
     margin-top: 7px;
+  }
+
+  .footer-partners {
+    width: auto;
+  }
+
+  .faq-banner input {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+
+  .faq-banner {
+    height: 400px;
+  }
+
+  .faq-banner h1 {
+    color: white;
+    font-size: 40px;
   }
 }
 

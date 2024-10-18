@@ -1019,7 +1019,7 @@ function Observatory() {
 
   return (
     <>
-      <Header page='dev' />
+      <Header page='observatorio' />
       <SideNavBar />
       <div className='page'>
         <div className="page-banner observatory-banner">

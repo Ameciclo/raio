@@ -39,7 +39,6 @@ function Faq() {
   return (
     <>
       <Header page='faq' />
-      <SideNavBar />
       <div className='page-banner faq-banner'>
         <h1>O que você está procurando?</h1>
         <input

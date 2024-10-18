@@ -32,7 +32,6 @@ function NotFoundPage() {
             {
               renderOthers && (
                 <>
-                  <SideNavBar />
                   <div className="notfound-container fade-in">
                     <img
                       src={gif404}

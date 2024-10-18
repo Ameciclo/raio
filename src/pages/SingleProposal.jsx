@@ -15,7 +15,6 @@ function SingleProposal() {
   return (
     <>
       <Header page='propostas' />
-      <SideNavBar />
       <>
         <div className="page-banner proposals-banner">
           <h1>Propostas</h1>

@@ -22,7 +22,6 @@ function SingleNews() {
   return (
     <>
       <Header page='noticias' />
-      <SideNavBar />
       {
         dataNews && (
           <>
