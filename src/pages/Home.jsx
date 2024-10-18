@@ -38,9 +38,7 @@ function Home() {
       <div className='home-text-about effect'>
         <h1>O que é o LOAClima?</h1>
         <br /><br />
-        {/* <p>{dataLoa.description}</p> */}
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab accusamus natus dolorem odio labore autem quasi, a quisquam eaque? Fuga repellendus ad est quis asperiores accusamus numquam minima voluptas! Quia! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, rem dolore obcaecati qui nesciunt deserunt vel distinctio fugiat corrupti minus mollitia officiis illum neque error nihil quod blanditiis cumque nemo.</p>
-
+        <p>{dataLoa.description}</p>
       </div>
       <div className="home-proposals">
         <h1>Nossas Propostas</h1>
