@@ -1868,6 +1868,15 @@ label {
 }
 
 @media (max-width: 1000px) {
+  .ask-container h1 {
+    text-align: start;
+    margin-bottom: 20px;
+  }
+
+  .ask-container p {
+    text-align: start;
+    font-size: large;
+  }
   .proposals-text h1 {
     text-align: start;
   }
