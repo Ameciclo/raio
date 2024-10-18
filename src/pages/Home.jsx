@@ -4,8 +4,10 @@ import SideNavBar from '../components/SideNavBar';
 import Footer from '../components/Footer';
 import { homeContentAPI, newsApi } from '../services/request';
 import NewsCard from '../components/NewsCard';
+import Loading from '../components/Loading';
 
 function Home() {
+  const [loading, setLoading] = useState(true);
   const [dataLoa, setDataLoa] = useState({});
   const [dataNews, setDataNews] = useState([]);
 
@@ -14,6 +16,7 @@ function Home() {
     async function fetchHomeContent() {
       const dataLOAClima = await homeContentAPI()
       setDataLoa(dataLOAClima);
+      setLoading(false)
     }
 
     return fetchHomeContent();
@@ -38,7 +41,7 @@ function Home() {
       <div className='home-text-about effect'>
         <h1>O que é o LOAClima?</h1>
         <br /><br />
-        <p>{dataLoa.description}</p>
+        {loading ? <Loading /> : (<p>{dataLoa.description}</p>)}
       </div>
       <div className="home-proposals">
         <h1>Nossas Propostas</h1>
