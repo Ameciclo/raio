@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
-import SideNavBar from '../components/SideNavBar';
 import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import { singleNewsApi } from '../services/request';

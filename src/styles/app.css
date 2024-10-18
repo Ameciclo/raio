@@ -1868,7 +1868,12 @@ label {
 }
 
 @media (max-width: 1000px) {
-
+  .proposals-text h1 {
+    text-align: start;
+  }
+  .news-text h1 {
+    text-align: start;
+  }
   .news-text img {
     margin-top: 40px;
     max-width: 400px;

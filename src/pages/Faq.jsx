@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
-import SideNavBar from '../components/SideNavBar';
 import AskReply from '../components/AskReply';
 import FaqForm from '../components/FaqForm';
 import Footer from '../components/Footer';

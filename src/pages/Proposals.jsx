@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/Header';
-import SideNavBar from '../components/SideNavBar';
 import Footer from '../components/Footer';
 import ProposalsCard from '../components/ProposalsCard';
 

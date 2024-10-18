@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
-import SideNavBar from '../components/SideNavBar';
 import Footer from '../components/Footer';
 import ActionCarousel from '../components/ActionsCarousel';
 import LazyLoad from 'react-lazyload';
@@ -1020,7 +1019,6 @@ function Observatory() {
   return (
     <>
       <Header page='observatorio' />
-      <SideNavBar />
       <div className='page'>
         <div className="page-banner observatory-banner">
           <h1>OBSERVATÓRIO</h1>
