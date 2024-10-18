@@ -1,12 +1,10 @@
 function CardPartner(props) {
   const partner = props.partner
   return (
-    <div className='partner-card' key={partner.id}>
-      <a href={partner.url}>
-        <img src={partner.logo.url} alt={partner.logo.name}></img>
-      </a>
+    <a className='partner-card' key={partner.id} href={partner.url}>
+      <img src={partner.logo.url} alt={partner.logo.name}></img>
       <p>{partner.name}</p>
-    </div>
+    </a>
   );
 }
 

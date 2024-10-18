@@ -8,6 +8,9 @@ function Contact() {
   return (
     <>
       <Header page='contato' />
+      <div className="page-banner contact-banner">
+        <h1>Contato</h1>
+      </div>
       <SideNavBar />
       <MessageForm />
       <Footer />

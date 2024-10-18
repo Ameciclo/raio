@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../images/logo1.png'
+import logo from '../images/logo2.png'
 import CardPartner from './CardPartner';
 import { homeContentAPI } from '../services/request';
 

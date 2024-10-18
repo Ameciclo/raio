@@ -17,11 +17,13 @@ function SingleProposal() {
       <Header page='propostas' />
       <SideNavBar />
       <>
-        <div className='news-pg fade-in'>
-          <div className="single-proposal-banner">
-            <h1>{dataProposal.title}</h1>
-          </div>
-          <p className='news-text'>{dataProposal.text}</p>
+        <div className="page-banner proposals-banner">
+          <h1>Propostas</h1>
+        </div>
+        <div className="proposals-text">
+          <h1>{dataProposal.title}</h1>
+          <br />
+          <p>{dataProposal.text}</p>
         </div>
         < Footer />
       </>

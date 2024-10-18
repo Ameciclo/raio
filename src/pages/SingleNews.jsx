@@ -18,7 +18,7 @@ function SingleNews() {
     return fetchSingleNewsData();
   }, [id]);
 
-  useEffect(() => console.log(dataNews),[dataNews])
+  useEffect(() => console.log(dataNews), [dataNews])
   return (
     <>
       <Header page='noticias' />
@@ -26,18 +26,17 @@ function SingleNews() {
       {
         dataNews && (
           <>
-            <div className='news-pg fade-in'>
-              <div className="single-news-banner">
-                <h1>{dataNews.title}</h1>
-                <p>{dataNews.subtitle}</p>
-              </div>
+            <div className="page-banner news-banner">
+              <h1>Notícias</h1>
+            </div>
 
-              <p className='news-text'>
-                <div>
-                  <img id='news-text-img' src={dataNews.featuredImage.data.attributes.url} alt={dataNews.featuredImage.data.attributes.alternativeText} />
-                </div>
-                {dataNews.body}
-              </p>
+            <div className='news-text'>
+              <h1>{dataNews.title}</h1>
+              <br />
+              <p>{dataNews.subtitle}</p>
+              <br /><br />
+              {dataNews.body}
+              <img id='news-text-img' src={dataNews.featuredImage.data.attributes.url} alt={dataNews.featuredImage.data.attributes.alternativeText} />
             </div>
             < Footer />
           </>

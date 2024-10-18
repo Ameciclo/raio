@@ -1021,8 +1021,8 @@ function Observatory() {
     <>
       <Header page='dev' />
       <SideNavBar />
-      <div className='observatory-pg'>
-        <div className="observatory-banner">
+      <div className='page'>
+        <div className="page-banner observatory-banner">
           <h1>OBSERVATÓRIO</h1>
         </div>
         <div className='observatory-area'>
@@ -1160,7 +1160,12 @@ function Observatory() {
                 </nav>
                 <span id='att'>{!!actions2023.length ? `ATUALIZADO: ${new Date()}` : 'ATUALIZADO: 10/10/2023'}</span>
               </>
-            ) : <Loading />
+            ) : (
+              <>
+                <h1 className="observatory-titles">Aguarde enquanto os dados são carregados...</h1>
+                <Loading />
+              </>
+            )
           }
         </div>
       </div>
